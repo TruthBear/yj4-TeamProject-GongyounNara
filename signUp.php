@@ -16,20 +16,20 @@
       <h1>회원가입</h1>
       <form class="sign-up-form">
         <div class="id-box">
-          <i class="fa-regular fa-user"></i>
+          <div class="icon"><i class="fa-regular fa-user"></i></div>
           <input class="id" type="text" placeholder="아이디"/>
-          <div class="check-button">중복확인</div>
+          <button class="check-button">중복확인</button>
         </div>
         <div class="password-box">
-          <i class="fa-solid fa-lock"></i>
+          <div class="icon"><i class="fa-solid fa-lock"></i></div>
           <input class="password" type="password" placeholder="비밀번호"/>
         </div>
         <div class="name-box">
-          <i class="fa-regular fa-user"></i>
+          <div class="icon"><i class="fa-regular fa-user"></i></div>
           <input class="name" type="text" placeholder="닉네임"/>
         </div>
         <div class="email-box">
-          <i class="fas fa-solid fa-envelope"></i>
+          <div class="icon"><i class="fas fa-solid fa-envelope"></i></div>
           <input class="email" type="email" placeholder="이메일"/>
         </div>
         <button class="button">회원가입</button>

@@ -33,6 +33,12 @@
         </form>
       </div>
       <div class="hr-sect">소셜 로그인</div>
+      <div class="social">
+        <div class="google">
+          <img src="./assets/icons/google.jpg"/>
+          <div>Google 계정으로 가입하기</div>
+        </div>
+      </div>
     </section>
   </div>
 </body>

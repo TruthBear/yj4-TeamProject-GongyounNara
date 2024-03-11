@@ -12,7 +12,7 @@ i{
   padding-left: 20px;
 }
 .login{
-  padding-top:100px;
+  padding-top:50px;
 }
 .id-box i{
   font-size: 18px;
@@ -80,9 +80,10 @@ i{
   margin-top: 20px;
 }
 .find-button div{
-  font-weight: 700;
+  font-weight: 800;
   font-size: 14px;
-  color:rgba(0, 0, 0,0.2);
+  color:#B5B5B5;
+  cursor:default;
 }
 input:focus {outline:none;}
 .id-box{
@@ -95,6 +96,13 @@ input:focus {outline:none;}
   border-style:solid;
   border-color: #000;
 }
+.id-box:focus-within{
+  border-width:1px 1px 1px 1px;
+  outline: 1px solid black;
+}
+.id-box:focus-within i {
+  color: #000;
+}
 .password-box{
   display: flex;
   width: 90%;
@@ -102,6 +110,13 @@ input:focus {outline:none;}
   height:50px;
   border-radius: 0 0 5px 5px;
   border:1px solid#000;
+}
+.password-box:focus-within{
+  border-width:1px 1px 1px 1px;
+  outline: 1px solid #000;
+}
+.password-box:focus-within i{
+  color: #000;
 }
 .hr-sect {
   display: flex;
@@ -122,12 +137,38 @@ input:focus {outline:none;}
   line-height: 0px;
   margin: 0px 10px;
 }
+.social{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+.google{
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  height:50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin-top: 10px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.google img{
+  width: 24px;
+  height: 24px;
+}
+.google:hover{
+  background-color: #F7FAFE;
+}
 /* 태블릿 */
 @media screen and (min-width:768px) {
   i{
     font-size: 28px;
   }
-  .login{
+  /* .login{
     padding-top: 120px;
-  }
+  } */
 }
