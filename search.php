@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="./css/search.css">
 </head>
 
 <body>
@@ -76,7 +76,7 @@
             <div class="inputWrap">
                 <div><p>🔍︎</p></div>													
                 <input type="text" class="form-control" placeholder="🔍︎  검색어를 입력하세요"   >
-                <button class="btnClear"><img src="../img/searchx.png" alt=""></button>
+                <button class="btnClear"><img src="./assets/icons/inputCancle-icon.png" alt=""></button>
             </div>	     
         </div>
     </section>
@@ -174,7 +174,7 @@
             <p>(재)예술경영지원센터 공연예술통합전산망(www.kopis.or.kr)</p>
         </div>
     </footer>
-<script src="../js/search.js"></script>
+<script src="./js/search.js"></script>
 </body>
 
 </html>
