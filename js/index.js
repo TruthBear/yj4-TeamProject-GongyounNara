@@ -34,3 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollDisabled = true;
     });
 });
+
+fetch("http://localhost/api/boxOfficeApi.php/")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+
+fetch("http://localhost/api/showingApi.php/")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+
+fetch("http://localhost/api/kidsShowApi.php/")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
