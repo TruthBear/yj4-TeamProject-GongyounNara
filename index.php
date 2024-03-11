@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -285,7 +285,7 @@
     <?php include './components/footer.php' ?>      
   </footer>
 
-  <script src="./js/index.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 
 </html>

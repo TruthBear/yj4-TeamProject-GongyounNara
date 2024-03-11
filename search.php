@@ -74,7 +74,7 @@
     <section>
         <div class="search-area">
             <div class="inputWrap">
-                <div><p>🔍︎</p></div>													
+                <div>🔍︎</div>													
                 <input type="text" class="form-control" placeholder="🔍︎  검색어를 입력하세요"   >
                 <button class="btnClear"><img src="./assets/icons/inputCancle-icon.png" alt=""></button>
             </div>	     

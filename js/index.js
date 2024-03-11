@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function toggleMenu() {
         menuContainer.style.display = menuContainer.style.display === 'none' ? 'flex' : 'none';
-        body.classList.toggle('menu-opened');
+        
+        // body에 menu-opened 클래스를 toggle하여 스타일을 변경
+        body.classList.toggle('menu-opened', menuContainer.style.display !== 'none');
 
         // 스크롤을 막거나 허용합니다.
         document.documentElement.style.overflow = scrollDisabled ? 'hidden' : 'auto';
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     closeButton.addEventListener('click', function () {
         menuContainer.style.display = 'none';
-        body.classList.toggle('menu-opened');
+        body.classList.remove('menu-opened');
         scrollDisabled = true;
         document.documentElement.style.overflow = 'auto';
     });
