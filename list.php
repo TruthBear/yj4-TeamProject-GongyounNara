@@ -5,69 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/list.css">
+    <script src="./js/toggleMenu.js" defer></script>
+    <script type="module" src="./js/list.js" defer></script>
+
 </head>
 
 <body>
     <!-- 대가리 -->
     <header>
-        <div class="head">
-            <!-- 로고 및 메뉴 -->
-            <div class="main-logo">
-                <div class="logo">
-                    <h1>공연나라</h1>
-                </div>
-                <!-- 메뉴 -->
-                <div class="menu-container">
-                    <ul>
-                    <li>메뉴1</li>
-                    <li>메뉴2</li>
-                    <li>메뉴3</li>
-                    <li>메뉴4</li>
-                    </ul>
-                </div>
-            </div>
-            <!--  검색창 및 토글 -->
-            <div class="main-area">
-              <nav>
-                  <!-- search -->
-                  <div>♥</div>
-                  <!-- area -->
-                  <div>서울☑</div>
-                  <!-- profile -->
-                  <div>★</div>
-              </nav>
-                <!-- 토글버튼 -->
-                <div class="toggle">
-                    <div class="tog-btn">
-                        <button id="toggleButton"><img src="../img/hambg.png" alt=""></button>
-                    </div>
-                    <div class="tog-menu">
-                       <div>
-                            <ul class="id">
-                                <li>🔴 로그인하세요.</li>
-                                <li><button id="closeButton"><img src="../img/x.png" alt=""></button></li>
-                            </ul>
-                       </div>
-                        <div class="menus">
-                            <div>
-                                <ul class="menu">
-                                    <li>메뉴1</li>
-                                    <li>메뉴2</li>
-                                    <li>메뉴3</li>
-                                    <li>메뉴4</li>
-                                </ul>
-                            </div>
-                            <div>
-                                    <ul class="as">
-                                        <li>고객센터</li>
-                                        <li>정보수정제안</li>
-                                    </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <?php include './components/header.php' ?>
     </header>
     
     <!-- 장르 -->
@@ -80,24 +26,39 @@
                 </div>
                 <div class="day-age">
                     <div>날짜</div>
-                    <div>아동</div>
+                    <input type="checkbox" name="kid" id="kid">
+                    <label for="kid">아동</label>
                 </div>
             </div>
             <!-- genre -->
+
           <div class="genres">
-                    <div class="grid-container">
-                        <ul class="grid-item">
-                            <li>전체</li>
-                            <li>연극</li>
-                            <li>무용</li>
-                            <li>대중무용</li>
-                            <li>클래식</li>
-                            <li>국악</li>
-                            <li>복합</li>
-                            <li>서커스/마술</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
+              <div class="grid-container">
+                <div>
+                  <input type="radio" name="genre" id="all" value="" checked >
+                  <input type="radio" name="genre" id="theater" value="AAAA" >
+                  <input type="radio" name="genre" id="dance" value="BBBC" >
+                  <input type="radio" name="genre" id="public-dance" value="BBBE" >
+                  <input type="radio" name="genre" id="european-classical-music" value="CCCA" >
+                  <input type="radio" name="genre" id="korean-classical-music" value="CCCC" >
+                  <input type="radio" name="genre" id="popular-music" value="CCCD" >
+                  <input type="radio" name="genre" id="mixed" value="EEEA" >
+                  <input type="radio" name="genre" id="circus-magic" value="EEEB" >
+                  <input type="radio" name="genre" id="musical" value="GGGA" >
+                </div>
+                <ul class="grid-item">
+                    <li><label for="all">전체</label></li>
+                    <li><label for="theater">연극</label></li>
+                    <li><label for="dance">무용</label></li>
+                    <li><label for="public-dance">대중무용</label></li>
+                    <li><label for="european-classical-music">클래식</label></li>
+                    <li><label for="korean-classical-music">국악</label></li>
+                    <li><label for="popular-music">대중음악</label></li>
+                    <li><label for="mixed">복합</label></li>
+                    <li><label for="circus-magic">서커스/마술</label></li>
+                    <li><label for="musical">뮤지컬</label></li>
+                </ul>
+              </div>
           </div>
         </div>
     </section>
@@ -197,14 +158,8 @@
 
         <!-- 푸터 -->
         <footer>
-            <div class="foot">
-                <p>대표전화 0000-0000 / 이메일 000@gmail.com</p>
-                <p>우) 00000 대구시 동구 동촌로 383</p>
-                <p>(재)예술경영지원센터 공연예술통합전산망(www.kopis.or.kr)</p>
-            </div>
+          <?php include './components/footer.php' ?>
         </footer>
-     
-    <script src="./js/list.js"></script>
 </body>
 
 
