@@ -91,7 +91,7 @@ function select() {
 }
 
 function renderSelectedDateInfo() {
-  let selectedDateInfo = year + "년 " + (month + 1) + "월 " + selectedDate + "일";
+  let selectedDateInfo = year + ("00"+(month + 1).toString()).slice(-2) + ("00"+selectedDate.toString()).slice(-2);
   console.log(selectedDateInfo);
 }
 
