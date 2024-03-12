@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
+    <script type="module" src="./api/apiController.js" defer></script>
+    <script type="module" src="../js/index.js" defer></script>
 </head>
 
 <body>
@@ -285,7 +287,6 @@
     <?php include './components/footer.php' ?>      
   </footer>
 
-  <script src="../js/index.js"></script>
 </body>
 
 </html>
