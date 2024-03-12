@@ -13,7 +13,7 @@
 
   <!-- 대가리 -->
   <header>
-    <?php include './components/header.php' ?>    
+    <?php include './components/header.php' ?>
   </header>
 
     <!-- 일주일 인기 공연  -->

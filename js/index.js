@@ -94,7 +94,8 @@ function paintData(data, elementTag) {
   });
 }
 
-// 현재 예매순위(일주인기간))
+
+// 현재 예매순위(일주인동안))
 const boxOfficeApi = async () => {
   const data = await apiController({
     url: "http://kopis.or.kr/openApi/restful/boxoffice?",
@@ -143,7 +144,6 @@ const boxOfficeApi = async () => {
   
 }
 
-
 // 현재 진행중인 공연
 const nowShwoingApi = async () => {
   const data = await apiController({
@@ -164,7 +164,6 @@ const kidsShowApi = async () => {
   paintData(data, '.three .pop');
   
 }
-
 
 
 
