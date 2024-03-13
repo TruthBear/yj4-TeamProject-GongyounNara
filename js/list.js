@@ -91,17 +91,18 @@ const paintData = (data, elementTag) => {
 
 // api요청 함수
 const showListApi = async (genre, kid) => {
-  const url = "http://www.kopis.or.kr/openApi/restful/pblprfr?";
-  const query = `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=11&newsql=Y&shcate=${genre}&kidstate=${kid}`;
-  
-  const data = await apiController({ url, query })
+  const obj = {
+    url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
+    query: `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=11&newsql=Y&shcate=${genre}&kidstate=${kid}`,
+  }
+  const data = await apiController(obj);
   paintData(data, "area-show")
 }
 
 // 쿼리 업데이트 함수
 const updateQuery = () => {
-  const genre = document.querySelector('.genres input:checked').value;
-  const kid = document.getElementById('kid').checked ? "Y" : " ";
+  const genre = document.querySelector('.genres input:checked')?.value;
+  const kid = document.getElementById('kid').checked ? "Y" : "";
   showListApi(genre, kid);
 }
 
