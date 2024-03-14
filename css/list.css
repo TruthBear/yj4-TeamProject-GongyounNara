@@ -5,9 +5,14 @@
     box-sizing: border-box;
 }
 
+html,body{
+    width: 100%;
+    overflow-x: hidden ;
+}
+
 a{
     text-decoration: none;
-    color: #fff;
+    color: white;
 }
 
 li{
@@ -31,6 +36,7 @@ body.menu-opened::before {
 label {
   cursor: pointer;
 }
+
 
 /* header */
 header{
@@ -94,10 +100,10 @@ header{
     position: fixed;
     top: 0;
     right: -10px;
-    background-color: #fff; 
+    background-color: #fff;
     flex-direction: column;
-    width: 66vw; 
-    height: 100vh; 
+    width: 66vw;
+    height: 100vh;
     display: none;
     z-index: 2;
 }
@@ -107,37 +113,50 @@ header{
     flex-direction: column;
 }
 
+.tog-menu .id-box{
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+}
+
 .tog-menu .id{
     display: flex;
     justify-content: space-between;
     font-size: 16px;
-    padding: 15px;
-    padding-left: 20px;
     border-bottom: 1px solid #ccc;
+    padding: 0px 0px 15px 0px;
 }
 
 #closeButton{
     background: none;
     border: none;
     cursor: pointer;
-    padding-right: 20px;
 }
 
 .menus{
     width: 100%;
-    padding-top: 30px;
+    padding: 40px 20px 0px 20px;
+    text-align: right;
 }
 
 .menus div ul{
-    margin-left: 73%;
+    padding-right: 20px;
+}
+
+.menus div ul li{
+    padding-bottom: 14px;
 }
 
 .menus div:first-child{
     border-bottom: 1px solid #ccc;
 }
 
+.menu a{
+    color: #000;
+}
+
 .menu li{
-    font-size: 25px;
+    font-weight: bold;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -147,16 +166,16 @@ header{
 }
 
 .as li{
-    font-size: 13px;
-    margin-bottom: 12px;
+    font-size: 15px;
+    margin-bottom: 6px;
     color:  #ccc;
 }
 
 .tog-menu .as{
-    padding-top: 25px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
-}
+} 
 
 
 /* section1 */
@@ -169,15 +188,16 @@ header{
 .title{
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 35px 20px 20px 20px ;
 }
 
-.title div{
-    margin: 5px;
+.title .area{
+    font-size: 32px;
 }
 
 .title .day-age{
     display: flex;
+    padding-left: 20px;
 }
 
 .day-age div{
@@ -190,15 +210,22 @@ header{
   background-color: #E9E8EC;
   padding: 5px 10px;
   border-radius: 30px;
-  margin: 5px;
+  margin-left: 10px;
 }
 
 .genres{
  display: flex;
  justify-content: center;
- padding-top: 10px;
- overflow: hidden; 
+ overflow: scroll; 
 margin-left: 20px;
+}
+
+.genres::-webkit-scrollbar{
+    display: none;
+}
+
+.grid-container{
+    margin-left: 72.5px;
 }
 
 .grid-item{
@@ -213,7 +240,7 @@ margin-left: 20px;
     background-color: #E9E8EC;
     border-radius: 20px;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px 8px;
     margin-right: 10px;
 }
 
@@ -269,12 +296,19 @@ input[type=checkbox]:checked + label
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .a-show .a-description li{
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     font-size: 20px;
+}
+
+.a-description li:first-child{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 140px;
 }
 
 .a-description li:nth-child(2){
@@ -316,6 +350,19 @@ footer{
     /* toggle */
     .tog-menu{
         width: 33vw;
+    }
+
+    /* section 1 */
+    .grid-item{
+        width: 130%;
+    }
+
+    .grid-container{
+        margin-left: 0px;
+    }
+
+    .genres{
+        overflow: hidden;
     }
 
     /* section2 */
