@@ -3,16 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+.wrap{
+  max-width: 500px;
+  margin: 0 auto;
+}
 .icon{
   max-width:500px;
   margin: 15px auto;
+  position: fixed;
 }
 i{
   font-size: 30px;
   padding-left: 20px;
 }
 .login{
-  padding-top:50px;
+  padding-top:100px;
 }
 .id-box i{
   font-size: 18px;
@@ -32,7 +37,7 @@ i{
   width: 100%;
 }
 .sign-in h1{
-    margin-top: 64px;
+    /* margin-top: 64px; */
     text-align: center;
     font-weight: 700;
     font-size: 36px;
@@ -142,6 +147,7 @@ input:focus {outline:none;}
   flex-direction: column; 
   align-items: center;
   justify-content: center;
+  gap:10px
 }
 .google{
   display: flex;
@@ -153,22 +159,77 @@ input:focus {outline:none;}
   border-radius: 5px;
   border: 1px solid #000;
   margin-top: 10px 0;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
 }
-.google img{
+.naver,.kakao{
+  display: flex;
+  width: 90%;
+  max-width: 500px;
+  height:50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+.naver img,.kakao img{
   width: 24px;
   height: 24px;
+  margin-right: 10px;
+}
+.google img{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
 }
 .google:hover{
   background-color: #F7FAFE;
 }
+.naver{
+  background-color: #03C75A;
+}
+.kakao{
+  background-color: #FDDC3F;
+}
+.mobile-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.mobile-social img{
+  width: 40px;
+  height: 40px;
+}
+.social{
+  display: none;
+}
+.id-error,.pw-error {
+  display: none;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: red;
+  font-size: 10px;
+}
+
+
 /* 태블릿 */
 @media screen and (min-width:768px) {
   i{
     font-size: 28px;
   }
-  /* .login{
-    padding-top: 120px;
-  } */
+  .login{
+    padding-top: 150px;
+  }
+  .social{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap:10px
+  }
+  .mobile-social{
+    display: none;
+  }
 }
