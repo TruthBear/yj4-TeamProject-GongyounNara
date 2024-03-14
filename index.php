@@ -22,7 +22,7 @@
         <div class="popular">
             <!-- title -->
             <div class="pop-title">
-                <p>일주일간 인기공연</p>
+                <p>일주일간 예매순위</p>
                 <div></div>
             </div>
             <div class="pop">
@@ -112,7 +112,7 @@
             <div class="pop-title">
                 <p>진행중인 공연</p>
                 <div></div>
-                <p>더보기</p>
+                <p><a href="">더보기</a></p>
             </div>
             <div class="pop">
                     <!-- show -->
@@ -201,7 +201,7 @@
             <div class="pop-title">
                 <p>어린이 공연</p>
                 <div></div>
-                <p>더보기</p>
+                <p><a href="">더보기</a></p>
             </div>
             <div class="pop">
                     <!-- show -->
