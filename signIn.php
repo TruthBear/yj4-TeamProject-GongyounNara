@@ -31,15 +31,40 @@
           <div>회원가입</div>
         </div>
         </form>
+        <!-- 에러  -->
+        <div class="id-error">·아이디를 입력해 주세요.</div>
+        <div class="pw-error">·비밀번호를 입력해 주세요.</div>
       </div>
       <div class="hr-sect">소셜 로그인</div>
+      <!-- 태블릿 -->
       <div class="social">
         <div class="google">
           <img src="./assets/icons/google.jpg"/>
           <div>Google 계정으로 가입하기</div>
         </div>
+        <div class="naver">
+          <img src="./assets/icons/naver.png"/>
+          <div>네이버 계정으로 가입하기</div>
+        </div>
+        <div class="kakao">
+          <img src="./assets/icons/kakao.png"/>
+          <div>카카오 계정으로 가입하기</div>
+        </div>
+      </div>
+      <!-- 모바일 -->
+      <div class="mobile-social">
+        <div class="m-google">
+          <img src="./assets/icons/Google_icon.png"/>
+        </div>
+        <div class="m-naver">
+          <img src="./assets/icons/naver2.png"/>
+        </div>
+        <div class="m-kakao">
+          <img src="./assets/icons/kakao.png"/>
+        </div>
       </div>
     </section>
   </div>
+  <script src="./js/signIn.js"></script>
 </body>
 </html>
