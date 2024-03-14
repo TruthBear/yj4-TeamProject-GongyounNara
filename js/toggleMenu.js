@@ -19,12 +19,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
   toggleButton.addEventListener('click', toggleMenu);
 
-  closeButton.addEventListener('click', function () {
+      closeButton.addEventListener('click', function () {
       menuContainer.style.display = 'none';
       body.classList.remove('menu-opened');
       scrollDisabled = true;
       document.documentElement.style.overflow = 'auto';
   });
+
+  document.querySelector('body.menu-opened::before').addEventListener('click', function () {
+    menuContainer.style.display = 'none';
+    body.classList.remove('menu-opened');
+    scrollDisabled = true;
+    document.documentElement.style.overflow = 'auto';
+});
+
 
   // 페이지가 로드된 후에 한 번만 클릭하여 초기화
   toggleButton.click();
@@ -33,4 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('beforeunload', function () {
       scrollDisabled = true;
   });
+});
+
+
+
+document.querySelector('body.menu-opened::before').addEventListener('click',function(){
+    console.log('hi')
 });

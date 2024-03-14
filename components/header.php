@@ -2,15 +2,15 @@
   <!-- 로고 및 메뉴 -->
   <div class="main-logo">
       <div class="logo">
-          <h1>공연나라</h1>
+          <h1><a href="./index.php">공연나라</a></h1>
       </div>
       <!-- 메뉴 -->
       <div class="menu-container">
           <ul>
-          <li>메뉴1</li>
-          <li>메뉴2</li>
-          <li>메뉴3</li>
-          <li>메뉴4</li>
+          <li><a href="">메뉴1</a></li>
+          <li><a href="">메뉴1</a></li>
+          <li><a href="">메뉴1</a></li>
+          <li><a href="">메뉴1</a></li>
           </ul>
       </div>
   </div>
@@ -30,7 +30,7 @@
               <button id="toggleButton"><img src="../assets/icons/hambergerMenu-icon.png" alt=""></button>
           </div>
           <div class="tog-menu">
-              <div>
+              <div class="id-box">
                   <ul class="id">
                       <li>🔴 로그인하세요.</li>
                       <li><button id="closeButton"><img src="../assets/icons/bambergerCancel-icon.png" alt="토글 메뉴 끄기"></button></li>
@@ -39,10 +39,10 @@
               <div class="menus">
                   <div>
                       <ul class="menu">
-                          <li>메뉴1</li>
-                          <li>메뉴2</li>
-                          <li>메뉴3</li>
-                          <li>메뉴4</li>
+                          <li><a href="./list.php">메뉴1</a></li>
+                          <li><a href="">메뉴1</a></li>
+                          <li><a href="">메뉴1</a></li>
+                          <li><a href="">메뉴1</a></li>
                       </ul>
                   </div>
                   <div>
