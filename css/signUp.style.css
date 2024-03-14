@@ -3,21 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+.wrap{
+  max-width: 500px;
+  margin: 0 auto;
+}
 header{
   font-weight: 700; 
-  font-size: 16px;
+  font-size: 25px;
   max-width: 500px;
   margin: 15px auto;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 .sign-up{width: 100%;}
 .sign-up h1{
-  margin-top: 64px;
+  margin-top: 67px;
   text-align: center;
   font-weight: 700;
   font-size: 36px;
 }
-.sign-up-form{
+.sign-up-input,.sign-up-input-error{
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -30,56 +34,62 @@ width: 90%;
 max-width: 500px;
 height:50px;
 border-radius: 5px 5px 0 0;
-border-width:1px 1px 0px 1px;
-border-style:solid;
-border-color: #000;
+border:1px solid black;
 background-color:rgba(233,232,236,0.2);
 }
 .id-box:focus-within{
-  border-width:1px 1px 1px 1px;
   outline: 1px solid black;
 }
 .id-box:focus-within .icon i {
   color: #000;
 }
-.email-box{
+.name-box{
 display: flex;
 width: 90%;
 max-width: 500px;
 height:50px;
+margin-top: -1px;
 border-radius: 0 0 5px 5px;
 border:1px solid #000 ;
 background-color:rgba(233,232,236,0.2)
 }
-.email-box:focus-within{
-  border-width:1px 1px 1px 1px;
+.name-box:focus-within{
   outline: 1px solid #000;
 }
-.email-box:focus-within .icon i{
+.name-box:focus-within .icon i{
   color: #000;
 }
-.password-box,.name-box{
+.password-box,.password-box2,.email-box{
   display: flex;
   width: 90%;
   max-width: 500px;
   height:50px;
-  border-width:1px 1px 0px 1px;
-  border-style:solid;
-  border-color: #000;
+  margin-top: -1px;
+  border:1px solid black;
   background-color:rgba(233,232,236,0.2)
 }
 .password-box:focus-within{
-  border-width:1px 1px 1px 1px;
   outline: 1px solid #000;
 }
 .password-box:focus-within .icon i{
   color: #000;
 }
-.name-box:focus-within{
-  border-width:1px 1px 1px 1px;
+.password-box2:focus-within{
+  outline: 1px solid #000;
+}
+.password-box2:focus-within .icon i{
+  color: #000;
+}
+.password-box2:focus-within{
+  outline: 1px solid #000;
+}
+.password-box2:focus-within .icon i{
+  color: #000;
+}
+.email-box:focus-within{
   outline: 1px solid black;
 }
-.name-box:focus-within .icon i{
+.email-box:focus-within .icon i{
   color: #000;
 }
 .check-button {
@@ -114,12 +124,20 @@ input.email{
   border:none;
   background-color:rgba(233,232,236,0.2);
 }
-.password,.name{
+.password,.password2,.name{
   width: 100%;
   max-width: 500px;
   height:50px;
   border:none;
   background-color:rgba(233,232,236,0.2);
+}
+.button-box{
+  display: flex; 
+  justify-content: center;
+  max-width: 500px;
+  bottom: 30px;
+  position: fixed;
+  width: 100%;
 }
 .button{
   width: 90%;
@@ -130,10 +148,32 @@ input.email{
   background-color:#000;
   color: #fff;
   border-radius: 5px;
-  bottom: 30px;
-  position: fixed;
   font-weight: 700;
   font-size: 18px;
   border: none;
 }
+.userid-error,
+.userpw-error,
+.unmatch-pw,
+.usermail-error,
+.usernick-error {
+  display: none;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: red;
+  font-size: 10px;
+}
 
+.error{
+  border:2px solid red;
+  margin-top: -2px;
+}
+.error-color{
+  color: red;
+}
+
+@media screen and (min-width:768px) {
+  .sign-up h1{
+    margin-top: 167px;
+  }
+}
