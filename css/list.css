@@ -225,7 +225,7 @@ margin-left: 20px;
 }
 
 .grid-container{
-    margin-left: 72.5px;
+    margin-left: 73px;
 }
 
 .grid-item{
@@ -284,12 +284,30 @@ input[type=checkbox]:checked + label
     grid-template-columns: repeat(2,1fr);
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.a-show{
+    width: 100%;
+    height: 320px;
+}
+
+.a-show .a-img{
+    width: 100%;
+    height: calc(320px*4/6);
+    object-fit: cover;
 }
 
 .a-show .a-img img{
     width: 100%;
+    height: 100%;
     border-radius: 10px;
+}
+
+.a-show .a-description{
+    width: 100%;
+    height: calc(320px*2/6);
 }
 
 .a-show .a-description ul{
@@ -305,6 +323,7 @@ input[type=checkbox]:checked + label
 }
 
 .a-description li:first-child{
+    font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -333,6 +352,7 @@ footer{
     color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-size: 12px;
 }
 
 .foot{
@@ -405,6 +425,19 @@ footer{
     .toggle{
         display: none;
     }
+    
+    /* section 1 */
+    .a-show{
+        height: 354px;
+    }
+
+    .a-show .a-img{
+        height: calc(354px*4/6);
+    }
+
+    .a-show .a-description{
+        height: calc(354px*2/6);
+    }
 
     /* section2 */
     .main-title{
@@ -418,11 +451,11 @@ footer{
 
     .area-show{
         grid-template-columns: repeat(5,1fr);
-        gap: 0;
+        gap: 20px;
     }
 
-    .a-show{
-        margin: 10px;
+    .a-description li:first-child{
+        width: 160px;
     }
 }
 
@@ -470,6 +503,35 @@ footer{
         display: none;
     }
 
+    
+
+
+    /*section 1 */
+    .a-show{
+        height: 412px;
+    }
+    
+    .title {
+        padding: 35px 20px 20px 0px;
+    }
+
+    .genres{
+        margin-left: 0px;
+    }
+
+    .area-show{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .a-show .a-img{
+        height: calc(412px*4/6);
+    }
+
+    .a-show .a-description{
+        height: calc(412px*2/6);
+    }
+
     /* section2 */
     .main-title{
         flex-direction: column;
@@ -482,11 +544,11 @@ footer{
         justify-content: flex-start;
     }
 
-    .area-show{
-        grid-template-columns: repeat(5,1fr);
+    .a-description li:first-child{
+        width: 170px;
     }
 
-    .a-show .a-img img{
-        width: 100%;
+    .area-show{
+        grid-template-columns: repeat(5,1fr);
     }
 }
