@@ -7,10 +7,10 @@
       <!-- 메뉴 -->
       <div class="menu-container">
           <ul>
-          <li><a href="">메뉴1</a></li>
-          <li><a href="">메뉴1</a></li>
-          <li><a href="">메뉴1</a></li>
-          <li><a href="">메뉴1</a></li>
+            <li><a href="./list.php">공연목록</a></li>
+            <li><a href="./search.php">공연검색</a></li>
+            <li><a href="">메뉴1</a></li>
+            <li><a href="">메뉴1</a></li>
           </ul>
       </div>
   </div>
@@ -39,8 +39,8 @@
               <div class="menus">
                   <div>
                       <ul class="menu">
-                          <li><a href="./list.php">메뉴1</a></li>
-                          <li><a href="">메뉴1</a></li>
+                          <li><a href="./list.php">공연목록</a></li>
+                          <li><a href="./search.php">공연검색</a></li>
                           <li><a href="">메뉴1</a></li>
                           <li><a href="">메뉴1</a></li>
                       </ul>
