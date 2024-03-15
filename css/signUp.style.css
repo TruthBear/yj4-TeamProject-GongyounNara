@@ -9,14 +9,17 @@
 }
 header{
   font-weight: 700; 
-  font-size: 25px;
+  font-size: 16px;
   max-width: 500px;
-  margin: 15px auto;
+  margin-top: 15px;
+  position: fixed;
   padding-left: 20px;
 }
-.sign-up{width: 100%;}
+.sign-up{
+  width: 100%;
+  padding-top: 100px;
+}
 .sign-up h1{
-  margin-top: 67px;
   text-align: center;
   font-weight: 700;
   font-size: 36px;
@@ -93,10 +96,10 @@ background-color:rgba(233,232,236,0.2)
   color: #000;
 }
 .check-button {
-margin-right: 15px;
+padding-right: 15px;
 white-space: nowrap;
 border: none;
-font-weight: 700;
+font-weight: 600;
 font-size: 14px;
 color: #000;
 background-color:rgba(233,232,236,0.2)
@@ -142,7 +145,7 @@ input.email{
 .button{
   width: 90%;
   max-width: 500px;
-  height:50px;
+  height:54px;
   text-align: center;
   line-height: 50px;
   background-color:#000;
@@ -158,7 +161,7 @@ input.email{
 .usermail-error,
 .usernick-error {
   display: none;
-  margin-left: 30px;
+  margin-left:20px;
   margin-top: 10px;
   color: red;
   font-size: 10px;
@@ -173,7 +176,23 @@ input.email{
 }
 
 @media screen and (min-width:768px) {
-  .sign-up h1{
-    margin-top: 167px;
+  .sign-up{
+    padding-top: 200px;
   }
+  .id-box,
+  .password-box,
+  .password-box2,
+  .email-box,
+  .name-box,
+  .button{
+    width: 500px;
+  }
+.userid-error,
+.userpw-error,
+.unmatch-pw,
+.usermail-error,
+.usernick-error{
+  margin-left: 0;
+}
+  header{padding-left: 0;}
 }
