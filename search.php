@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/search.css">
-    <script src="./js/toggleMenu.js" defer></script>
+    <script type="module" src="./js/toggleMenu.js" defer></script>
+    <script type="module" src="./js/search.js" defer></script>
 </head>
 
 <body>
@@ -20,15 +21,14 @@
             <div class="search-area">
                 <div class="inputWrap">
                     <div>🔍︎</div>													
-                    <input type="text" class="form-control printName" onkeyup='prints()' placeholder="검색어를 입력하세요">
+                    <input type="text" class="form-control printName" placeholder="검색어를 입력하세요">
                     <button class="btnClear"><img src="./assets/icons/inputCancle-icon.png" alt=""></button>
                 </div>	     
             </div>
         </section>
-
+        <div class='print-result'></div>
         <!-- 공연 list -->
         <section class="list">
-            <div class='print-result'></div>
             <div class="searchs">
                 <div class="search-result">
                     <h2>검색결과</h2>
@@ -116,8 +116,8 @@
         <footer>
         <?php include './components/footer.php' ?>
         </footer>
+
     </div>
-<script src="./js/search.js"></script>
 </body>
 
 </html>
