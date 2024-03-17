@@ -20,7 +20,18 @@
         <!-- search -->
         <div>♥</div>
         <!-- area -->
-        <div>서울☑</div>
+        <div id="area-box">
+          <div id="area-button">
+            <img src="assets/icons/Location Marker.svg" alt="Location Marker">
+            <div id="location">서울</div>
+          </div>
+          <ul class="option-list">
+            <li class="option option-hidden" >서울</li>
+            <li class="option option-hidden" >인천</li>
+            <li class="option option-hidden" >대전</li>
+            <li class="option option-hidden" >대구</li>
+          </ul>
+        </div>
         <!-- profile -->
         <div>★</div>
     </nav>

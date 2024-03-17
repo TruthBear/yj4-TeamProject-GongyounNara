@@ -68,6 +68,7 @@ header{
 
 .head .main-area{
     display: flex;
+    align-items: center;
 }
 
 .main-area nav{
@@ -76,6 +77,51 @@ header{
 
 .main-area nav div:first-child, .main-area nav div:nth-child(3){
     display: none;
+}
+
+/* 지역 선택 박스 */
+
+#area-box {
+  position: relative;
+  padding: 5px;
+}
+
+#area-button {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+#area-button img {
+  padding-right: 5px;
+}
+
+.option-list {
+
+  background: #fff;
+  color: #000;
+
+  position: absolute;
+  top: 30px;
+
+  flex-direction: column;
+
+  box-shadow: 1px 1px 5px black;
+}
+
+.option {
+  padding: 5px 10px;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.option:hover {
+  background: #ccc;
+}
+
+.option-hidden {
+  display: none;
 }
 
 /* 토글 */
