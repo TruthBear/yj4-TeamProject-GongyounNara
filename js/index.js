@@ -1,33 +1,6 @@
 import { apiController } from "../api/apiController.js";
 
-// const updateLocation = () => {
-//   const areaButton = document.getElementById('area-button');
-//   const location = document.getElementById('location');
-//   const options = Array.from(document.getElementsByClassName('option'));
-//   let data;
-
-//   areaButton.addEventListener('click', () => {
-//     options.forEach((item) => {
-//       item.classList.toggle('option-hidden')
-//     })
-//   })
-
-//   options.forEach((item) => {
-//     item.addEventListener('click', () => {
-//       location.innerText = item.innerText;
-//       data = item.innerText;
-//       options.forEach((item) => {
-//         item.classList.add('option-hidden');
-//       })
-//     })
-//   })
-  
-// }
-
 const options = Array.from(document.getElementsByClassName('option'));
-
-
-
 
 
 // 공연목록API용 출력 함수
@@ -144,6 +117,7 @@ const kidsShowApi = async ( locationCode ) => {
   
 }
 
+// 지역 선택 목록 on/off
 const showLocationList = () => {
   const areaButton = document.getElementById('area-button');
   areaButton.addEventListener('click', () => {
@@ -153,6 +127,7 @@ const showLocationList = () => {
   })
 }
 
+// 지역 이름을 지역 코드로 변환
 const convertNameToCode = (locationName) => {
   switch(locationName) {
     case "서울": return "11";
@@ -163,6 +138,7 @@ const convertNameToCode = (locationName) => {
   }
 }
 
+// 선택 되어 있는 지역으로 업데이트
 const updateQuery = () => {
   const location = document.getElementById('location').innerText; 
   const locationCode = convertNameToCode(location);
@@ -174,6 +150,7 @@ const updateQuery = () => {
   })
 }
 
+// 지역 선택
 const selectLocation = () => {
   options.forEach(item => {
     item.addEventListener('click', () => {
@@ -184,7 +161,6 @@ const selectLocation = () => {
   })
 
 }
-
 
 const init = () => {
   showLocationList();
