@@ -59,7 +59,7 @@ const paintData = (data) => {
 
     })
   } else {
-    searchsShow.innerHTML = "자료 없어 돌아가"
+    searchsShow.innerHTML = "찾으시는 자료가 없습니다."
   }
 }
 
@@ -89,7 +89,7 @@ const input = document.getElementsByTagName('input')[0];
 input.addEventListener('keyup', debounce(() => {
   const searchWord = input.value;
   showData(searchWord);
-}, 1000));  // 1초뒤 api 요청
+}, 500));  // 0.5초뒤 api 요청
 
 
 document.querySelectorAll('.search-area input').forEach(function(input) {

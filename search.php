@@ -26,7 +26,9 @@
                 </div>	     
             </div>
         </section>
+
         <div class='print-result'></div>
+        
         <!-- 공연 list -->
         <section class="list">
             <div class="searchs">
@@ -34,7 +36,7 @@
                     <h2>검색결과</h2>
                 </div>
                 <div class="searchs-show">
-                        <!-- show -->
+             <!-- show -->
                 <div class="search-show">
                     <!-- img -->
                     <div class="search-img">
