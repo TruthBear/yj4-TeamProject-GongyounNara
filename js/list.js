@@ -1,5 +1,8 @@
 import { apiController } from "../api/apiController.js";
 
+const options = Array.from(document.getElementsByClassName('option'));
+
+
 // 리스트페이지API 출력 함수
 const paintData = (data, elementTag) => {
   const areaShow = document.getElementsByClassName(elementTag)[0]; 
@@ -88,12 +91,33 @@ const paintData = (data, elementTag) => {
   
 }
 
+// 지역 선택 목록 on/off
+const showLocationList = () => {
+  const areaButton = document.getElementById('area-button');
+  areaButton.addEventListener('click', () => {
+    options.forEach(item => {
+      item.classList.toggle('option-hidden');
+    })
+  })
+}
+
+// 지역 이름을 지역 코드로 변환
+const convertNameToCode = (locationName) => {
+  switch(locationName) {
+    case "서울": return "11";
+    case "인천": return "28";
+    case "대전": return "30";
+    case "대구": return "27";
+    default: return "11"; // 서울로 통일
+  }
+}
+
 
 // api요청 함수
-const showListApi = async (genre, kid) => {
+const showListApi = async (genre, kid, locationCode) => {
   const obj = {
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=11&newsql=Y&shcate=${genre}&kidstate=${kid}`,
+    query: `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=${locationCode}&newsql=Y&shcate=${genre}&kidstate=${kid}`,
   }
   const data = await apiController(obj);
   paintData(data, "area-show")
@@ -103,7 +127,9 @@ const showListApi = async (genre, kid) => {
 const updateQuery = () => {
   const genre = document.querySelector('.genres input:checked')?.value;
   const kid = document.getElementById('kid').checked ? "Y" : "";
-  showListApi(genre, kid);
+  const location = document.getElementById('location').innerText; 
+  const locationCode = convertNameToCode(location);
+  showListApi(genre, kid, locationCode);
 }
 
 // 장르 업데이트 함수
@@ -114,13 +140,29 @@ const updateGenre = () => {
   })
 }
 
-// 어린이 체크 함수
+// 어린이 체크  함수
 const updateKid = () => {
   const kid = document.getElementById('kid');
   kid.addEventListener('click', updateQuery);
 }
 
+// 지역 선택
+const selectLocation = () => {
+  options.forEach(item => {
+    item.addEventListener('click', () => {
+      const location = document.getElementById('location');
+      location.innerText = item.innerText;
+      updateQuery();
+      options.forEach(item => {
+        item.classList.add('option-hidden');
+      })
+    })
+  })
+}
+
 const init = () => {
+  showLocationList();
+  selectLocation();
   updateGenre();
   updateKid();
   updateQuery();

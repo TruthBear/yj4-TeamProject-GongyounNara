@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/list.css">
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/list.js" defer></script>
-
 </head>
 
 <body>
