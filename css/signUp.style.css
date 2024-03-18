@@ -24,12 +24,12 @@ header{
   font-weight: 700;
   font-size: 36px;
 }
-.sign-up-input,.sign-up-input-error{
+.sign-up-input{
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .id-box{
 display: flex;
@@ -39,12 +39,6 @@ height:50px;
 border-radius: 5px 5px 0 0;
 border:1px solid black;
 background-color:rgba(233,232,236,0.2);
-}
-.id-box:focus-within{
-  outline: 1px solid black;
-}
-.id-box:focus-within .icon i {
-  color: #000;
 }
 .name-box{
 display: flex;
@@ -56,12 +50,6 @@ border-radius: 0 0 5px 5px;
 border:1px solid #000 ;
 background-color:rgba(233,232,236,0.2)
 }
-.name-box:focus-within{
-  outline: 1px solid #000;
-}
-.name-box:focus-within .icon i{
-  color: #000;
-}
 .password-box,.password-box2,.email-box{
   display: flex;
   width: 90%;
@@ -70,30 +58,6 @@ background-color:rgba(233,232,236,0.2)
   margin-top: -1px;
   border:1px solid black;
   background-color:rgba(233,232,236,0.2)
-}
-.password-box:focus-within{
-  outline: 1px solid #000;
-}
-.password-box:focus-within .icon i{
-  color: #000;
-}
-.password-box2:focus-within{
-  outline: 1px solid #000;
-}
-.password-box2:focus-within .icon i{
-  color: #000;
-}
-.password-box2:focus-within{
-  outline: 1px solid #000;
-}
-.password-box2:focus-within .icon i{
-  color: #000;
-}
-.email-box:focus-within{
-  outline: 1px solid black;
-}
-.email-box:focus-within .icon i{
-  color: #000;
 }
 .check-button {
 padding-right: 15px;
@@ -106,11 +70,7 @@ background-color:rgba(233,232,236,0.2)
 }
 .icon{
   background-color:rgba(233,232,236,0.2);
-}
-i{
-  color: #B5B5B5;
-  margin-top: 15px;
-  padding:0 20px;
+  padding: 0 20PX;
 }
 input:focus {outline:none;}
 input.id{
@@ -161,12 +121,14 @@ input.email{
 .usermail-error,
 .usernick-error {
   display: none;
-  margin-left:20px;
+  margin-left:30px;
   margin-top: 10px;
   color: red;
   font-size: 10px;
 }
-
+.focus{
+  border: 2px solid #000;
+}
 .error{
   border:2px solid red;
   margin-top: -2px;
