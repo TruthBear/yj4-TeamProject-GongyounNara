@@ -1,4 +1,15 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
+.open-calendar{
+  position: relative;
+}
+.wrap{
+  padding: 1rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
 .header{
   border-bottom: 1px solid black;
   padding-bottom: 15px;
@@ -12,13 +23,9 @@
   width: 20px;
   height: 20px;
 }
-.title{
+.calendar-title{
   font-weight: 700;
   font-size: 24px;
-}
-body{
-  padding: 1rem;
-  height: 100vh;
 }
 h3{
   font-weight: 400;
@@ -27,7 +34,7 @@ h3{
   margin: auto;
   width: 100%;
 }
-.calendar header{
+.banner{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,12 +128,15 @@ h3{
 }
 
 
+
 @media screen and (min-width:1024px) {
   .wrap{
     width: 350px;
     height: 460px;
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 2px 10px rgba(0,0,0,0.23)
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 2px 10px rgba(0,0,0,0.23);
+    position:absolute;
+    top: 35px;
   }
   .header{
     border: none;

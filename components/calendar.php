@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/calendar.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="wrap">
+<div class="wrap">
     <div class="header">
-      <div class="title">날짜 선택</div>
+      <div class="calendar-title">날짜 선택</div>
       <img src="../assets/icons/close.jpg"/>
     </div>
     <div class="calendar">
-      <header>
+      <div class="banner">
         <h3></h3>
         <nav>
           <button id="prev"></button>
           <button id="next"></button>
         </nav>
-      </header>
-      <section>
+      </div>
+      <div class="days-box">
         <ul class="days">
           <li class="holiday">일</li>
           <li>월</li>
@@ -31,9 +22,6 @@
           <li class="holiday">토</li>
         </ul>
         <ul class="dates"></ul>
-      </section>
+      </div>
     </div>
   </div>
-  <script src="../js/calendar.js"></script>
-</body>
-</html>

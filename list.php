@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/calendar.css">
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/list.js" defer></script>
+    <script type="module" src="./js/calendar.js" defer></script>
 </head>
 
 <body>
@@ -24,7 +26,10 @@
                     <strong><p>서울공연</p></strong>
                 </div>
                 <div class="day-age">
-                    <div>날짜</div>
+                    <div class="open-calendar">
+                      날짜
+                      <?php include './components/calendar.php'?>
+                    </div>
                     <input type="checkbox" name="kid" id="kid">
                     <label for="kid">아동</label>
                 </div>

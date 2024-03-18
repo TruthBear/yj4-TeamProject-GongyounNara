@@ -253,7 +253,7 @@ header{
     padding-left: 20px;
 }
 
-.day-age div{
+.day-age > div{
     background-color: #E9E8EC;
     padding: 5px 10px;
     border-radius: 30px;

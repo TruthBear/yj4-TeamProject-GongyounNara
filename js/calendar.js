@@ -1,4 +1,4 @@
-const header=document.querySelector(".calendar h3");
+const yearAndMonth=document.querySelector(".banner h3");
 const dates=document.querySelector(".dates");
 const navs=document.querySelectorAll("#prev,#next");
 
@@ -44,12 +44,12 @@ function renderCalendar(){
 }
 
 
-  for(i=end; i<6;i++) {
+  for(let i=end; i<6;i++) {
     datesHtml+=`<li class="inactive">${i-end+1}</li>`;
   }
 
   dates.innerHTML=datesHtml;
-  header.textContent=`${year}년 ${months[month]} `;
+  yearAndMonth.textContent=`${year}년 ${months[month]} `;
 }
 
 navs.forEach(nav=>{
@@ -97,5 +97,15 @@ function renderSelectedDateInfo() {
 
 renderCalendar();
 select();
+
+//캘린더 이벤트
+// window.onload = function(){
+//  const openCalendar=document.querySelector(".open-calendar");
+//  const dateBtn=document.querySelector(".in-calendar");
+
+//  openCalendar.addEventListener("click",function(){
+//    dateBtn.style.display="block"
+//   })
+// }
 
 
