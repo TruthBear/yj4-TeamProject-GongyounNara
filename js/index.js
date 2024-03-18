@@ -132,8 +132,12 @@ const convertNameToCode = (locationName) => {
   switch(locationName) {
     case "서울": return "11";
     case "인천": return "28";
+    case "세종": return "36";
     case "대전": return "30";
+    case "광주": return "29";
+    case "울산": return "31";
     case "대구": return "27";
+    case "부산": return "26";
     default: return "11"; // 서울로 통일
   }
 }

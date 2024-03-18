@@ -28,8 +28,12 @@
           <ul class="option-list">
             <li class="option option-hidden" >서울</li>
             <li class="option option-hidden" >인천</li>
+            <li class="option option-hidden" >세종</li>
             <li class="option option-hidden" >대전</li>
+            <li class="option option-hidden" >광주</li>
+            <li class="option option-hidden" >울산</li>
             <li class="option option-hidden" >대구</li>
+            <li class="option option-hidden" >부산</li>
           </ul>
         </div>
         <!-- profile -->
