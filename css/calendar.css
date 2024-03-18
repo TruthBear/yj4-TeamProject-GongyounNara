@@ -126,6 +126,9 @@ h3{
   border-radius: 50%;
   z-index: -1;
 }
+.date-hidden{
+  display: none;
+}
 
 
 

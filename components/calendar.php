@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="wrap date-hidden">
     <div class="header">
       <div class="calendar-title">날짜 선택</div>
       <img src="../assets/icons/close.jpg"/>

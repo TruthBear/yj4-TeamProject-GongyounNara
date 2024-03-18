@@ -99,13 +99,9 @@ renderCalendar();
 select();
 
 //캘린더 이벤트
-// window.onload = function(){
-//  const openCalendar=document.querySelector(".open-calendar");
-//  const dateBtn=document.querySelector(".in-calendar");
-
-//  openCalendar.addEventListener("click",function(){
-//    dateBtn.style.display="block"
-//   })
-// }
-
+const dateBtn=document.querySelector(".open-calendar");
+const calendarWrap=document.querySelector(".wrap");
+dateBtn.addEventListener("click",function(){
+  calendarWrap.classList.toggle("date-hidden");
+})
 
