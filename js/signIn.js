@@ -12,16 +12,28 @@ document.addEventListener("DOMContentLoaded", function() {
   signInForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
+    let errors=false;
+
     if(idInput.value===""){
       idError.style.display="block";
+      errors=true;
     } else if(idInput.value !== ""&&passwordInput.value===""){
       idError.style.display="none";
       pwError.style.display="block";
+      errors=true;
     } else {
       idError.style.display="none";
       pwError.style.display="none";
+      errors=true;
     }
+
+    if(!errors){
+      signInForm.submit();
+    }
+    
   });
+
+  //focus
   idInput.addEventListener("click", function() {
     idBox.classList.add("focus");
     userIcon.forEach(icon => {
