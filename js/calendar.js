@@ -76,7 +76,7 @@ navs.forEach(nav=>{
 })
 
 //날짜선택
-
+let selectedDate;
 function select() {
   document.querySelectorAll(".dates li").forEach(function (day) {
     day.addEventListener("click", function () {
@@ -99,9 +99,20 @@ renderCalendar();
 select();
 
 //캘린더 이벤트
-const dateBtn=document.querySelector(".open-calendar");
+const clickDate=document.querySelector(".click-date");
 const calendarWrap=document.querySelector(".wrap");
-dateBtn.addEventListener("click",function(){
+const closeButton=document.querySelector(".close-button");
+
+clickDate.addEventListener("click",function(){
   calendarWrap.classList.toggle("date-hidden");
 })
 
+closeButton.addEventListener("click",function(){
+  calendarWrap.classList.add("date-hidden");
+})
+
+document.addEventListener("click", function(e) {
+  if (!calendarWrap.contains(e.target) && e.target !== clickDate) {
+    calendarWrap.classList.add("date-hidden");
+  }
+});

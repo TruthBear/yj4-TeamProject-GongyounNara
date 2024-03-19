@@ -146,10 +146,7 @@ h3{
     margin: 0 auto;
     padding-top: 15px;
   }
-  header{
-    margin: 20px 0 30px 0;
-  }
-  header h3{
+  .banner h3{
     font-size: 18px;
   }
   .calendar{
@@ -167,5 +164,5 @@ h3{
     z-index: 2;
   }
   .dates li{font-size: 16px;}
-  .header img{display: none;}
+  /* .header img{display: none;} */
 }

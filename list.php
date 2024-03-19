@@ -27,10 +27,12 @@
                         <strong><p>서울공연</p></strong>
                     </div>
                     <div class="day-age">
-                        <div class="open-calendar">
+                    <div class="open-calendar">
+                        <div class="click-date">
                         날짜
+                        </div>  
                         <?php include './components/calendar.php'?>
-                        </div>
+                    </div>
                         <input type="checkbox" name="kid" id="kid">
                         <label for="kid">아동</label>
                     </div>

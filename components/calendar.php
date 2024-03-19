@@ -1,7 +1,7 @@
 <div class="wrap date-hidden">
     <div class="header">
       <div class="calendar-title">날짜 선택</div>
-      <img src="../assets/icons/close.jpg"/>
+      <img class="close-button" src="../assets/icons/close.jpg"/>
     </div>
     <div class="calendar">
       <div class="banner">
