@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const pwIcon2=document.querySelector(".pw2");
   
   password2Input.addEventListener("input", function() {
-    if (password2Input.value !== "" || passwordInput.value == password2Input.value) {
+    if (password2Input.value !== "" && passwordInput.value == password2Input.value) {
       password2Box.classList.remove("error");
       password2Input.classList.remove("error-color");
       unmatchPwError.style.display = "none";
