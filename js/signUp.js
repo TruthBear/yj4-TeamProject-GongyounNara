@@ -24,14 +24,17 @@ document.addEventListener("DOMContentLoaded", function() {
   // console.log(icon)
 
   signUpForm.addEventListener("submit", function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
+
+    let errors=false
+
     if (passwordInput.value !== password2Input.value) {
       unmatchPwError.style.display = "block";
       password2Box.classList.add("error")
       password2Input.classList.add("error-color")
       pwIcon2.style.fill="red";
       password2Box.classList.remove("focus");
-
+      errors=true
     } else {
       unmatchPwError.style.display = "none";
     }
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
         icon.style.stroke = "red";
       });
       idInputBox.classList.remove("focus");
+      errors=true
     } else {
       userIdError.style.display = "none";
     }
@@ -54,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
       passwordInput.classList.add("error-color")
       pwIcon.style.fill="red";
       passwordBox.classList.remove("focus");
+      errors=true
     } else {
       userPwError.style.display = "none";
     }
@@ -63,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
       password2Input.classList.add("error-color")
       pwIcon2.style.fill="red";
       password2Box.classList.remove("focus");
+      errors=true
     }
 
     if (emailInput.value === "") {
@@ -71,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
       emailInput.classList.add("error-color")
       emailIcon.style.fill="red";
       emailBox.classList.remove("focus");
+      errors=true
     } else {
       userMailError.style.display = "none";
     }
@@ -82,9 +89,15 @@ document.addEventListener("DOMContentLoaded", function() {
       userIcon2.forEach(icon => {
         icon.style.stroke = "red";
       });
-      nameBox.classList.remove("focus")
+      nameBox.classList.remove("focus");
+      errors=true
     } else {
       userNickError.style.display = "none";
+    }
+    console.log(errors);
+    if (!errors){
+      console.log(errors)
+      signUpForm.submit();
     }
 
   });

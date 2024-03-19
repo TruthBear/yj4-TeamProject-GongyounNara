@@ -69,8 +69,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (password2Input.value !== "" || passwordInput.value == password2Input.value) {
       password2Box.classList.remove("error");
       password2Input.classList.remove("error-color");
-      // unmatchPwError.style.display = "none";
+      unmatchPwError.style.display = "none";
+    } else if(password2Input.value !== "") {
       pwIcon2.style.fill="#000";
+      password2Input.classList.remove("error-color");
     } else {
       password2Box.classList.add("error");
       password2Input.classList.add("error-color");
