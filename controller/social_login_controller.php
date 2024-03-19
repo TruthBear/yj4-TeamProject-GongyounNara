@@ -87,7 +87,7 @@ class social_login_controller {
 
     if($this->state == "google") {
       $uid = $data['sub'];
-      $nickname = $data['name'];
+      $name = $data['name'];
       $email = $data['email'];
       $profile_picture = $data['picture'];
     }
@@ -99,7 +99,6 @@ class social_login_controller {
 
   function login() {
     $data = $this->social_login_repository->find_user_by_email($this->profile_model->email);
-
     // 유저가 존재하지 않으면 회원가입
     if($data == null) {
       $this->social_login_repository->signup($this->profile_model, $this->state);
@@ -121,7 +120,7 @@ class social_login_controller {
     }
 
     session_start();
-    $_SESSION['user_id'] = $this->profile_model->id;
+    $_SESSION['user_id'] = $this->profile_model->uid;
     $_SESSION['user_name'] = $this->profile_model->name;
     $_SESSION['user_profile'] = $this->profile_model->profile_picture;
     $_SESSION['access_token'] = $this->token_model->get_access_token();

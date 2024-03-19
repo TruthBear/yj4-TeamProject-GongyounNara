@@ -7,6 +7,7 @@ if (empty($_SESSION["user_id"])) {
 }
 
 if (isset($_SESSION["user_id"])) {
+  echo "<script>console.log('아이디 있음')</script>";
   $user_id = $_SESSION["user_id"];
 } else {
   $user_id = "";
