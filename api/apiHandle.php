@@ -1,7 +1,7 @@
 <?php
 
 $url;
-// $apiKey = "service=".getenv('API_KEY'); // httpd파일에 맨 아래쪽에 SetEnv API_KEY 본인api키  
+$apiKey = "service=".getenv('API_KEY'); // httpd파일에 맨 아래쪽에 SetEnv API_KEY 본인api키  
 $query;
 
 if(isset($_POST)){

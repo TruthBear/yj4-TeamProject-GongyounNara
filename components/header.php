@@ -1,3 +1,35 @@
+<?php 
+
+if (empty($_SESSION["user_id"])) {
+  session_start();
+}
+
+if (isset($_SESSION["user_id"])) {
+  $user_id = $_SESSION["user_id"];
+} else {
+  $user_id = "";
+}
+
+if (isset($_SESSION["user_name"])) {
+  $user_name = $_SESSION["user_name"];
+} else {
+  $user_name = "";
+}
+
+if (isset($_SESSION["user_profile"])) {
+  $user_profile = $_SESSION["user_profile"];
+} else {
+  $user_profile = "";
+}
+
+if (isset($_SESSION["user_role"])) {
+  $user_role = $_SESSION["user_role"];
+} else {
+  $user_role = "";
+}
+
+?>
+
 <div class="head">
   <!-- 로고 및 메뉴 -->
   <div class="main-logo">
@@ -37,7 +69,30 @@
           </ul>
         </div>
         <!-- profile -->
-        <div>★</div>
+        <?php 
+          if(!$user_id) {
+        ?>
+        <div><a href="signIn.php">로그인</a></div>
+        <div><a href="signUp.php">회원가입</a></div>
+        <?php
+          } else {
+            $logged = $user_name."님";
+        ?>
+        <div><?=$logged?> </div>
+        <div> | </div>
+        <div><a href="logout.php">로그아웃</a> </div>
+        <div> | </div>
+        <div><a href="member_modify_form.php">정보 수정</a></div>
+        <?php
+          }
+  
+          if($user_role == "admin") {
+        ?>
+        <div><a href="admin.php">관리자 페이지</a></div>
+        <?php
+          }
+        ?>
+
     </nav>
       <!-- 토글버튼 -->
       <div class="toggle">

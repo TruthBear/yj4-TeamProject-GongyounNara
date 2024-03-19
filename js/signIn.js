@@ -24,13 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       idError.style.display="none";
       pwError.style.display="none";
-      errors=true;
-    }
-
-    if(!errors){
       signInForm.submit();
     }
-    
   });
 
   //focus

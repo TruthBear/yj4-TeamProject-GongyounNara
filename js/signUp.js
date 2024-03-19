@@ -94,9 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       userNickError.style.display = "none";
     }
-    console.log(errors);
     if (!errors){
-      console.log(errors)
       signUpForm.submit();
     }
 
