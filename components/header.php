@@ -1,5 +1,7 @@
 <?php 
 
+include "config/const.php";
+
 if (empty($_SESSION["user_id"])) {
   session_start();
 }

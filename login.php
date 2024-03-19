@@ -39,11 +39,8 @@ if(!$num_match) {
     $_SESSION['user_profile'] = $row['profile_url'];
     $_SESSION['user_role'] = $row['member_role'];
 
-    echo "
-      <script>
-        location.href = 'index.php';
-      </script>    
-      ";
+    header("Location: index.php");
+
   }
 }
 

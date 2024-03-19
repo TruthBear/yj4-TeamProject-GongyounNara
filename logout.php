@@ -5,11 +5,8 @@ unset($_SESSION['user_id']);
 unset($_SESSION['user_name']);
 unset($_SESSION['user_profile']);
 unset($_SESSION['user_role']);
+unset($_SESSION['access_token']);
 
-echo "
-  <script>
-    location.href = 'index.php';
-  </script>
-  "
+header("Location: index.php");
 
 ?>

@@ -14,11 +14,8 @@ $sql .= "values('$id', '$pw', '$email', '$name', '$created_at')";
 mysqli_query($db_connect, $sql);
 mysqli_close($db_connect);
 
-echo "
-<script>
-location.href = 'index.php';
-</script>
-"
+header("Location: index.php");
+
 
 
 ?>

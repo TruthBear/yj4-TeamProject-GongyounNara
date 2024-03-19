@@ -100,7 +100,7 @@ header{
     padding-right: 15px;
 }
 
-.main-area nav div:first-child, .main-area nav div:nth-child(3){
+.main-area nav div:first-child, .main-area nav div:nth-child(n+3){
     display: none;
 }
 
@@ -459,7 +459,7 @@ footer{
         display: flex;
     }
 
-    .main-area nav div:first-child, .main-area nav div:nth-child(3){
+    .main-area nav div:first-child, .main-area nav div:nth-child(n+3){
         display: block;
     }
 
@@ -551,7 +551,7 @@ footer{
         margin-right: 10 px;
     }
 
-    .main-area nav div:first-child, .main-area nav div:nth-child(3){
+    .main-area nav div:first-child, .main-area nav div:nth-child(n+3){
         display: block;
     }
     

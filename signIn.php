@@ -7,6 +7,7 @@
   <title>Document</title>
 </head>
 <body>
+  <?php include 'config/const.php' ?>
   <div class="wrap">
     <section class="sign-in">
       <div class="icon">
@@ -46,17 +47,19 @@
       <div class="hr-sect">소셜 로그인</div>
       <!-- 태블릿 -->
       <div class="social">
-        <div class="google">
-          <img src="./assets/icons/google.jpg"/>
-          <div>Google 계정으로 가입하기</div>
-        </div>
+        <a href=<?= social_login::social_login_url('google') ?>>
+          <div class="google">
+            <img src="./assets/icons/google.jpg"/>
+            <div>Google 계정으로 로그인</div>
+          </div>
+        </a>
         <div class="naver">
           <img src="./assets/icons/naver.png"/>
-          <div>네이버 계정으로 가입하기</div>
+          <div>네이버 계정으로 로그인</div>
         </div>
         <div class="kakao">
           <img src="./assets/icons/kakao.png"/>
-          <div>카카오 계정으로 가입하기</div>
+          <div>카카오 계정으로 로그인</div>
         </div>
       </div>
       <!-- 모바일 -->
