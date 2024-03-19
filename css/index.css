@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+html,body{
+    width: 100%;
+    overflow-x: hidden ;
+    height: 100vh;
+}
+
 a{
     text-decoration: none;
     color:white;
@@ -26,6 +32,25 @@ body.menu-opened::before {
     background-color: #000;
     opacity: 0.65;
     z-index: 1;
+}
+
+label{
+    cursor: pointer;
+  }
+
+.wrapper {
+    position:relative; 
+    min-height:100%;
+}
+
+.wrapper .list {
+    padding-bottom:100px;
+}
+
+.wrapper footer {
+    position:absolute; 
+    width:100%; 
+    bottom:0;
 }
 
 /* header */

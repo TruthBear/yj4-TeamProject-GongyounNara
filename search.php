@@ -52,7 +52,7 @@
                         <!-- <div class="search-genre">
                         </div> -->
                         <div class="search-now">
-                            <h1>공연중</h1>
+                            <h1>공연예정</h1>
                         </div>
                     </div>
                 </div>

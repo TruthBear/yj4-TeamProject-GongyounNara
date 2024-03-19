@@ -8,6 +8,7 @@
 html,body{
     width: 100%;
     overflow-x: hidden ;
+    height: 100vh;
 }
 
 a{
@@ -37,6 +38,20 @@ label {
   cursor: pointer;
 }
 
+.wrapper {
+    position:relative; 
+    min-height:100%;
+}
+
+.wrapper .list {
+    padding-bottom:100px;
+}
+
+.wrapper footer {
+    position:absolute; 
+    width:100%; 
+    bottom:0;
+}
 
 /* header */
 header{
