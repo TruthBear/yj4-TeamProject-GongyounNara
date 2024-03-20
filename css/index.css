@@ -87,6 +87,13 @@ header{
     margin-right: 10px;
 }
 
+/* 메뉴 호버 색깔 */
+.menu-container li a:hover{
+    color: #FEC100;
+    text-decoration: underline;
+    text-underline-offset: 5px ;
+}
+
 .head ul{
     display: flex;
 }
@@ -309,6 +316,10 @@ header{
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 20px;
+}
+
+.menu li a:hover{
+    color: #08a5c0;
 }
 
 .tog-menu .menu{

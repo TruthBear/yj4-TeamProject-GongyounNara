@@ -43,9 +43,9 @@ if (isset($_SESSION["user_role"])) {
       <div class="menu-container">
           <ul>
             <li><a href="./list.php">공연목록</a></li>
-            <li>menu 2</li>
+            <li><a href="">menu 2</a></li>
           </ul>
-      </div>
+      </div> 
   </div>
   <!--  검색창 및 토글 -->
   <div class="main-area">
