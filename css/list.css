@@ -93,16 +93,46 @@ header{
 
 .head .main-area{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-area nav{
     padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-area nav div:first-child, .main-area nav div:nth-child(3){
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info div{
+    padding-right: 15px;
+}
+
+.user-info div:nth-child(n+1){
     display: none;
 }
 
+.user-img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img img{
+    width: 36px;
+    height: 36px;
+}
+
+.search-img{
+    padding-left: 15px;
+    display: none;
+}
 /* 지역 선택 박스 */
 
 #area-box {
@@ -478,6 +508,18 @@ footer{
         width: 100%;
     }
 
+    .user-info div:nth-child(n+1){
+        display: block;
+    }
+
+    #area-box{
+        padding-right: 15px;
+    }
+
+    .search-img{
+        display: block;
+    }
+
     .menu-container{
         display: block;
     }
@@ -540,6 +582,18 @@ footer{
     .head{
         width: 100%;
         max-width: 1200px;
+    }
+
+    #area-box{
+        padding-right: 15px;
+    }
+
+    .user-info div:nth-child(n+1){
+        display: block;
+    }
+
+    .search-img{
+        display: block;
     }
 
     section{

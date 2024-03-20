@@ -43,17 +43,13 @@ if (isset($_SESSION["user_role"])) {
       <div class="menu-container">
           <ul>
             <li><a href="./list.php">공연목록</a></li>
-            <li><a href="./search.php">공연검색</a></li>
-            <li><a href="">메뉴1</a></li>
-            <li><a href="">메뉴1</a></li>
+            <li>menu 2</li>
           </ul>
       </div>
   </div>
   <!--  검색창 및 토글 -->
   <div class="main-area">
     <nav>      
-        <!-- search -->
-        <div>♥</div>
         <!-- area -->
         <div id="area-box">
           <div id="area-button">
@@ -75,28 +71,37 @@ if (isset($_SESSION["user_role"])) {
         <?php 
           if(!$user_id) {
         ?>
-        <div><a href="signIn.php">로그인</a></div>
-        <div><a href="signUp.php">회원가입</a></div>
+        <div class='user-info'>
+          <div><a href="signIn.php">로그인</a></div>
+          <div><a href="signUp.php">회원가입</a></div>
+          <div class='user-img'>
+              <div class='user-btn'>
+                <img src="./assets/profiles/default.jpg" alt="">
+              </div>
+          </div>
+        </div>
         <?php
           } else {
             $logged = $user_name."님";
-        ?>
-        <div><?=$logged?> </div>
-        <div> | </div>
-        <div><a href="logout.php">로그아웃</a> </div>
-        <div> | </div>
-        <div><a href="member_modify_form.php">정보 수정</a></div>
+            ?>
+           <ul class="user-list">
+                <li class="user user-hidden" >
+                  <a href="#">
+                    <div>이름</div>
+                    <div>프로필 보기</div>
+                  </a>
+                </li>
+                <li class="user user-hidden" ><a href="#">관리자 페이지</a></li>
+                <li class="user user-hidden" ><a href="#">로그아웃</a></li>
+            </ul>
         <?php
           }
-  
-          if($user_role == "admin") {
-        ?>
-        <div><a href="admin.php">관리자 페이지</a></div>
-        <?php
-          }
-        ?>
+          ?>
+        <div class = 'search-img'>
+          <a href="./search.php"><img src="./assets/icons/SEARCH.png" alt=""></a>
+        </div>
 
-    </nav>
+</nav>
       <!-- 토글버튼 -->
       <div class="toggle">
           <div class="tog-btn">
@@ -112,16 +117,16 @@ if (isset($_SESSION["user_role"])) {
               <div class="menus">
                   <div>
                       <ul class="menu">
+                        <li><a href="./search.php">공연검색</a></li>
                           <li><a href="./list.php">공연목록</a></li>
-                          <li><a href="./search.php">공연검색</a></li>
                           <li><a href="">메뉴1</a></li>
                           <li><a href="">메뉴1</a></li>
                       </ul>
                   </div>
                   <div>
                           <ul class="as">
-                              <li>고객센터</li>
-                              <li>정보수정제안</li>
+                              <li>관리자 페이지</li>
+                              <li>로그아웃</li>
                           </ul>
                   </div>
               </div>

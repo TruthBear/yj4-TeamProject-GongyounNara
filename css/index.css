@@ -94,13 +94,91 @@ header{
 .head .main-area{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .main-area nav{
     padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-area nav div:first-child, .main-area nav div:nth-child(n+3){
+.user-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-info div{
+    padding-right: 15px;
+}
+
+.user-info div:nth-child(n+1){
+    display: none;
+}
+
+.user-img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img img{
+    width: 36px;
+    height: 36px;
+}
+
+/* user 선택박스 */
+.user-btn{
+    cursor: pointer;
+}
+
+.user-list{
+    background: #fff;
+    color: #000;
+    position: absolute;
+    top: 40px;
+    right: -45px;
+    box-shadow: 0 4px 4px  black;
+    display: flex;
+    flex-direction: column;
+    width: 122px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.user-list a{
+    color: #000;
+}
+
+.user-list li:first-child{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-list li:first-child div:nth-child(2){
+    font-size: 13px;
+    color: #b5b5b5;
+}
+
+.user{
+    padding: 10px 10px;
+    cursor: pointer; 
+}
+
+.user:nth-child(n+2):hover{
+    background: #cccccc7c;
+}
+
+.user-hidden{
+    display: none;
+}
+
+.search-img{
+    padding-left: 15px;
     display: none;
 }
 
@@ -108,7 +186,7 @@ header{
 
 #area-box {
   position: relative;
-  padding: 5px;
+  padding-right: 5px;
 }
 
 #area-button {
@@ -128,14 +206,18 @@ header{
 
   position: absolute;
   top: 30px;
+  left: -7px;
+  width: 80px;
 
   flex-direction: column;
 
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 0 4px 4px black;
+
+  border-radius: 5px;
 }
 
 .option {
-  padding: 5px 10px;
+  padding: 5px 8px;
 
   text-align: center;
   cursor: pointer;
@@ -451,6 +533,18 @@ footer{
         width: 100%;
     }
 
+    .user-info div:nth-child(n+1){
+        display: block;
+    }
+
+    #area-box{
+        padding-right: 15px;
+    }
+
+    .search-img{
+        display: block;
+    }
+
     .menu-container{
         display: block;
     }
@@ -527,6 +621,18 @@ footer{
     .head{
         width: 100%;
         max-width: 1200px;
+    }
+
+    .user-info div:nth-child(n+1){
+        display: block;
+    }
+
+    .search-img{
+        display: block;
+    }
+
+    #area-box{
+        padding-right: 15px;
     }
 
     section{
