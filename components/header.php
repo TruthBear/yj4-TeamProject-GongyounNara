@@ -136,7 +136,6 @@ console.log('$user_id, $user_name, $user_profile, $user_email, $user_social_type
             </svg>
           </a>
         </div>
-
 </nav>
       <!-- 토글버튼 -->
       <div class="toggle">

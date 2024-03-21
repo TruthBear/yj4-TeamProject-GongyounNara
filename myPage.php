@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/myPage.style.css"/>
+    <script type="module" src="../js/index.js" defer></script>
+    <script src="./js/toggleMenu.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-  <header></header>
+  <header>
+    <?php include './components/header.php' ?>
+  </header>
   <div class="wrap">
     <div class="profile">
-      <div class="profile-image">
-        <img class=user-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAC9nkUrOYr_nZKahjeZAMtS03mfddn6iXxw&usqp=CAU"/>
-        <img class="edit-icon" src="./assets/icons/edit.png"/>
-      </div>
+      <div>
+        <div class="profile-image">
+          <img class=user-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAC9nkUrOYr_nZKahjeZAMtS03mfddn6iXxw&usqp=CAU"/>
+          <img class="edit-icon" src="./assets/icons/edit.png"/>
+        </div>
         <div class="user-name">이름</div>
         <div class="user-email">email222@gmail.com</div>
-    </div>
+      </div>
     <section class="my-profile">
         <div class="tag">내 프로필</div>
         <div class="profile-info">
@@ -43,6 +48,7 @@
           </div>
         </div>
     </section>
+    </div>
     <section class="like-list">
       <div class="tag">관심 목록</div>
       <div class="thumbnail-container">
@@ -75,6 +81,8 @@
       </div>
     </section>
   </div>
-  <footer></footer>
+  <footer>
+    <?php include './components/footer.php' ?>
+  </footer>
 </body>
 </html>
