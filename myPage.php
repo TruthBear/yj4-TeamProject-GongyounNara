@@ -53,28 +53,40 @@
       <div class="tag">관심 목록</div>
       <div class="thumbnail-container">
         <div class="thumbnail-box">
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2023/12/04/05/54/ferris-wheel-8428738_1280.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2023/12/08/05/38/cat-8436843_640.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
-          <div class="thumbnail">
-            <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+          <div class="card">
+            <div class="thumbnail">
+              <img  src="https://cdn.pixabay.com/photo/2024/02/25/13/30/car-8595770_1280.jpg"/>
+            </div>
             <div class="show-name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo recusandae repellendus natus dicta quisquam quo dolor dignissimos esse mollitia rem reprehenderit facere iusto, expedita voluptatibus placeat repellat veritatis beatae officia?</div>
           </div>
         </div>
