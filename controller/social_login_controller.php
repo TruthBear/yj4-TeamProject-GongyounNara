@@ -27,6 +27,9 @@ class social_login_controller {
       $client_id = GOOGLE_CLIENT_ID;
       $client_secret = GOOGLE_CLIENT_SECRET;
       $login_url = "https://oauth2.googleapis.com";
+    }else if($this->state == "kakao") {
+      $client_id = KAKAO_CLIENT_ID;
+      $login_url = "https://kauth.kakao.com/oauth";
     }
 
     $return_url = "$login_url/token?grant_type=authorization_code&client_id=".$client_id."&redirect_uri=".$redirect_uri."&code=".$this->code;
@@ -68,6 +71,8 @@ class social_login_controller {
     $profile_url = "";
     if($this->state == "google") {
       $profile_url = "https://www.googleapis.com/oauth2/v3/userinfo";
+    } else if($this->state == "kakao") {
+      $profile_url = "https://kapi.kakao.com/v2/user/me";
     }
 
     $curl = curl_init();
@@ -78,7 +83,7 @@ class social_login_controller {
     
     $res = curl_exec($curl);
 
-    $data = json_decode($res, true);
+    $data = json_decode($res, true);    
 
     $uid = "";
     $name = "";
@@ -92,6 +97,11 @@ class social_login_controller {
       $name = $data['name'];
       $email = $data['email'];
       $profile_picture = $data['picture'];
+    } else if ($this->state == 'kakao') {
+      $uid = $data['id'];
+      $name = $data['kakao_account']['profile']['nickname'];
+      $email = $data['kakao_account']['email'];
+      $profile_picture = $data['kakao_account']['profile']['profile_image_url'];
     }
     
     $profile = new profile_model($uid, $email, $name, $profile_picture, $social_type, $social_role);

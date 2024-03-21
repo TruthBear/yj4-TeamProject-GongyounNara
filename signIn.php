@@ -53,13 +53,15 @@
             <div>Google 계정으로 로그인</div>
           </div>
         </a>
+        <a href=<?= social_login::social_login_url('kakao')?>>
+          <div class="kakao">
+            <img src="./assets/icons/kakao.png"/>
+            <div>카카오 계정으로 로그인</div>
+          </div>
+        </a>
         <div class="naver">
           <img src="./assets/icons/naver.png"/>
           <div>네이버 계정으로 로그인</div>
-        </div>
-        <div class="kakao">
-          <img src="./assets/icons/kakao.png"/>
-          <div>카카오 계정으로 로그인</div>
         </div>
       </div>
       <!-- 모바일 -->
