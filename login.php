@@ -33,14 +33,16 @@ if(!$num_match) {
       ";
     exit;
   } else {
+
     session_start();
     $_SESSION['user_id'] = $row['id'];
     $_SESSION['user_name'] = $row['name'];
+    $_SESSION['user_email'] = $row['email'];
     $_SESSION['user_profile'] = $row['profile_url'];
+    $_SESSION['user_social_type'] = $row['social_type'];
     $_SESSION['user_role'] = $row['member_role'];
 
     header("Location: index.php");
-
   }
 }
 
