@@ -100,7 +100,6 @@ if (isset($_SESSION["user_role"])) {
         <div class = 'search-img'>
           <a href="./search.php"><img src="./assets/icons/SEARCH.png" alt=""></a>
         </div>
-
 </nav>
       <!-- 토글버튼 -->
       <div class="toggle">
