@@ -59,10 +59,12 @@
             <div>카카오 계정으로 로그인</div>
           </div>
         </a>
-        <div class="naver">
-          <img src="./assets/icons/naver.png"/>
-          <div>네이버 계정으로 로그인</div>
-        </div>
+        <a href=<?= social_login::social_login_url('naver')?>>
+          <div class="naver">
+            <img src="./assets/icons/naver.png"/>
+            <div>네이버 계정으로 로그인</div>
+          </div>
+        </a>
       </div>
       <!-- 모바일 -->
       <div class="mobile-social">

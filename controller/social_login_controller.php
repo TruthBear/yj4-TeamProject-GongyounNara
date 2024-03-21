@@ -30,6 +30,10 @@ class social_login_controller {
     }else if($this->state == "kakao") {
       $client_id = KAKAO_CLIENT_ID;
       $login_url = "https://kauth.kakao.com/oauth";
+    } else if($this->state == "naver") {
+      $client_id = NAVER_CLIENT_ID;
+      $client_secret = NAVER_CLIENT_SECRET;
+      $login_url = "https://nid.naver.com/oauth2.0";
     }
 
     $return_url = "$login_url/token?grant_type=authorization_code&client_id=".$client_id."&redirect_uri=".$redirect_uri."&code=".$this->code;
@@ -58,6 +62,8 @@ class social_login_controller {
 
       $data = json_decode($res, true);
 
+      print_r($data);
+
       $this->token_model = new token_model($data);
 
     } catch(Exception $e) {
@@ -73,6 +79,8 @@ class social_login_controller {
       $profile_url = "https://www.googleapis.com/oauth2/v3/userinfo";
     } else if($this->state == "kakao") {
       $profile_url = "https://kapi.kakao.com/v2/user/me";
+    } else if($this->state == "naver") {
+      $profile_url = "https://openapi.naver.com/v1/nid/me";
     }
 
     $curl = curl_init();
@@ -83,7 +91,10 @@ class social_login_controller {
     
     $res = curl_exec($curl);
 
+    echo "<script>console.log($res)</script>";
+
     $data = json_decode($res, true);    
+
 
     $uid = "";
     $name = "";
@@ -102,6 +113,11 @@ class social_login_controller {
       $name = $data['kakao_account']['profile']['nickname'];
       $email = $data['kakao_account']['email'];
       $profile_picture = $data['kakao_account']['profile']['profile_image_url'];
+    } else if ($this->state == 'naver') {
+      $uid = $data['response']['id'];
+      $name = $data['response']['nickname'];
+      $email = $data['response']['email'];
+      $profile_picture = $data['response']['profile_image'];
     }
     
     $profile = new profile_model($uid, $email, $name, $profile_picture, $social_type, $social_role);
