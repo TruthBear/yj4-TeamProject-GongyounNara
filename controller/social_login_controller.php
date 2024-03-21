@@ -84,6 +84,8 @@ class social_login_controller {
     $name = "";
     $email = "";
     $profile_picture = "";
+    $social_type = $this->state;
+    $social_role = "$this->state 회원";
 
     if($this->state == "google") {
       $uid = $data['sub'];
@@ -92,7 +94,7 @@ class social_login_controller {
       $profile_picture = $data['picture'];
     }
     
-    $profile = new profile_model($uid, $name, $email, $profile_picture);
+    $profile = new profile_model($uid, $email, $name, $profile_picture, $social_type, $social_role);
     $this->profile_model = $profile;
     return $profile;
   }
@@ -100,6 +102,7 @@ class social_login_controller {
   function login() {
     $data = $this->social_login_repository->find_user_by_email($this->profile_model->email);
     // 유저가 존재하지 않으면 회원가입
+
     if($data == null) {
       $this->social_login_repository->signup($this->profile_model, $this->state);
     } else if($data['social_type'] != $this->state) {
@@ -120,9 +123,12 @@ class social_login_controller {
     }
 
     session_start();
-    $_SESSION['user_id'] = $this->profile_model->uid;
+    $_SESSION['user_id'] = $this->profile_model->email;
     $_SESSION['user_name'] = $this->profile_model->name;
+    $_SESSION['user_email'] = $this->profile_model->email;
     $_SESSION['user_profile'] = $this->profile_model->profile_picture;
+    $_SESSION['user_social_type'] = $this->profile_model->social_type;
+    $_SESSION['user_role'] = $this->profile_model->member_role;
     $_SESSION['access_token'] = $this->token_model->get_access_token();
 
     header("Location: index.php");
