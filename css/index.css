@@ -132,7 +132,7 @@ header{
     align-items: center;
 }
 
-.user-info div{
+.user-info > div{
     padding-right: 15px;
 }
 
@@ -145,12 +145,12 @@ header{
     height: 36px;
     border-radius: 50px;
     overflow: hidden;
+    border: 2px solid #FEC100;
     
 }
 
 .user-img img{
-    width: 36px;
-    height: 36px;
+  width: 100%
 }
 
 /* user 선택박스 */

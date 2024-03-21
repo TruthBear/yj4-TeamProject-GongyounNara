@@ -103,8 +103,8 @@ console.log('$user_id, $user_name, $user_profile, $user_email, $user_social_type
           } else {
             ?>
             <div class='user-info'>
-              <div class='user-img'>
-                  <div class='user-btn'>
+              <div class='user-btn'>
+                  <div class='user-img'>
                     <img src=<?=$user_profile?> alt="User Profile Image">
                   </div>
               </div>
@@ -129,9 +129,6 @@ console.log('$user_id, $user_name, $user_profile, $user_email, $user_social_type
         <?php
           }
           ?>
-        <!-- <div class = 'search-img'>
-          <a href="./search.php"><img src="./assets/icons/SEARCH.png" alt=""></a>
-        </div> -->
         <div class='search-img'>
           <a href="./search.php">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" fill="#fff" viewBox="0 0 72 72">
@@ -164,11 +161,13 @@ console.log('$user_id, $user_name, $user_profile, $user_email, $user_social_type
                   } else {
                 ?>
                   <ul class="id">
-                    <li class="toggle-user-wrap">
-                      <div class="toggle-user-img-wrap">
-                        <img src=<?=$user_profile?> alt="User Profile Image">
-                      </div>
-                      <span><strong><?=$user_name?></strong></span>
+                    <li>
+                      <a href="#" class="toggle-user-wrap">
+                        <div class="toggle-user-img-wrap">
+                          <img src=<?=$user_profile?> alt="User Profile Image">
+                        </div>
+                        <span><strong><?=$user_name?></strong></span>
+                      </a>
                     </li>
                     <li><button id="closeButton"><img src="../assets/icons/bambergerCancel-icon.png" alt="토글 메뉴 끄기"></button></li>
                   </ul>
