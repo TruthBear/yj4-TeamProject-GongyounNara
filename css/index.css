@@ -90,8 +90,10 @@ header{
 /* 메뉴 호버 색깔 */
 .menu-container li a:hover{
     color: #FEC100;
+
     text-decoration: underline;
     text-underline-offset: 5px ;
+    text-decoration-thickness: 2px;
 }
 
 .head ul{
@@ -111,6 +113,19 @@ header{
     justify-content: center;
 }
 
+.user-info div > a:hover {
+  color: #FEC100;
+
+  text-decoration: underline;
+  text-underline-offset: 5px ;
+  text-decoration-thickness: 2px;
+
+}
+
+.main-area nav > div:hover a svg{
+  fill: #FEC100;
+}
+
 .user-info{
     position: relative;
     display: flex;
@@ -128,8 +143,9 @@ header{
 .user-img{
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 50px;
     overflow: hidden;
+    
 }
 
 .user-img img{
@@ -181,19 +197,30 @@ header{
 }
 
 .user-hidden{
-    display: none;
+  display: none;
 }
 
 .search-img{
-    padding-left: 15px;
-    display: none;
+  display: none;
 }
+
+.search-img:hover {
+  box-shadow: inset 0 -2px 0 0 #fec100; 
+  /* border_bottom에 선을 주지 않고 box-shadow를 이렇게 주면
+   호버 했을 시 움찔하는 현상 없음  */
+}
+
+
 
 /* 지역 선택 박스 */
 
 #area-box {
   position: relative;
   padding-right: 5px;
+}
+
+#area-box:hover path{
+  fill: #fec100;
 }
 
 #area-button {
@@ -221,6 +248,8 @@ header{
   box-shadow: 0 4px 4px black;
 
   border-radius: 5px;
+
+  overflow: hidden;
 }
 
 .option {
@@ -252,7 +281,12 @@ header{
 #toggleButton{
     background: #000;
     border: none;
-} 
+    cursor: pointer;
+}
+
+#toggleButton:hover path {
+  fill: #FEC100;
+}
 
 .tog-menu {
     position: fixed;
@@ -266,7 +300,7 @@ header{
     z-index: 2;
 }
 
-.tog-menu div{
+.tog-menu > div{
     display: flex;
     flex-direction: column;
 }
@@ -284,10 +318,43 @@ header{
     padding: 0px 0px 15px 0px;
 }
 
+.id li a {
+  color: black;
+  
+}
+
+.toggle-user-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-user-img-wrap {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  overflow: hidden;
+
+  border: 2px #08a5c0 solid;
+  margin-right: 15px;
+}
+
+.toggle-user-img-wrap img {
+  width: 100%;
+}
+
 #closeButton{
     background: none;
     border: none;
     cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+}
+
+#closeButton img {
+  width: 100%;
+  height: 100%;
 }
 
 .menus{
@@ -330,7 +397,10 @@ header{
 .as li{
     font-size: 15px;
     margin-bottom: 6px;
-    color:  #ccc;
+}
+
+.as a {
+  color:  #ccc;
 }
 
 .tog-menu .as{
@@ -546,6 +616,10 @@ footer{
 
     .user-info div:nth-child(n+1){
         display: block;
+    }
+
+    .user-info {
+      margin-right: 15px;
     }
 
     #area-box{
