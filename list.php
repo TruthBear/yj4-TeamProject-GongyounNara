@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/list.css">
     <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./css/header.css">
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/list.js" defer></script>
     <script type="module" src="./js/calendar.js" defer></script>

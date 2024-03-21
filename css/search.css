@@ -54,7 +54,7 @@ label {
 }
 
 /* header */
-header{
+/* header{
     background-color: #000;
     padding-top: 15px;
     padding-bottom: 16px;
@@ -132,9 +132,9 @@ header{
 .search-img{
     padding-left: 15px;
     display: none;
-}
+} */
 /* 토글 */
-.toggle{
+/* .toggle{
     position: relative;
     color: #000;
 }
@@ -228,7 +228,7 @@ header{
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-} 
+}  */
 
 /* section 1 */
 section:nth-child(2) {
@@ -437,7 +437,7 @@ footer{
 /* pc 1024px */
 @media screen and (min-width:1024px) {
          /* header */
-         .head{
+         /* .head{
             width: 100%;
         }
     
@@ -455,7 +455,7 @@ footer{
 
         .menu-container{
             display: block;
-        }
+        } */
 
         .list{
             width: 100%;
@@ -469,7 +469,7 @@ footer{
             max-width: 811px;
         }
         /* header */
-        .toggle{
+        /* .toggle{
             display: none;
         }
 
@@ -481,7 +481,7 @@ footer{
         .main-area nav div:first-child, .main-area nav div:nth-child(3){
             display: block;
         }
-        
+         */
         /* section1 */
         .inputWrap input {
             width: 600px;
@@ -526,12 +526,12 @@ footer{
 
 /* pc 1044px */
 @media screen and (min-width:1440px) {
-    .menu-container{
+    /* .menu-container{
         display: block;
-    }
+    } */
 
  /* header */
-    header{
+    /* header{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -565,7 +565,7 @@ footer{
 
     .main-area nav div:first-child, .main-area nav div:nth-child(3){
         display: block;
-    }
+    } */
     
     /* section1 */
     .inputWrap input {

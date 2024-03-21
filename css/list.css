@@ -54,7 +54,7 @@ label {
 }
 
 /* header */
-header{
+/* header{
     background-color: #000;
     padding-top: 15px;
     padding-bottom: 16px;
@@ -132,10 +132,10 @@ header{
 .search-img{
     padding-left: 15px;
     display: none;
-}
+} */
 /* 지역 선택 박스 */
 
-#area-box {
+/* #area-box {
   position: relative;
   padding: 5px;
 }
@@ -176,10 +176,10 @@ header{
 
 .option-hidden {
   display: none;
-}
+} */
 
 /* 토글 */
-.toggle{
+/* .toggle{
     position: relative;
     color: #000;
 }
@@ -273,7 +273,7 @@ header{
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-} 
+}  */
 
 
 /* section1 */
@@ -467,9 +467,9 @@ footer{
 @media screen and (min-width:768px) {
     
     /* toggle */
-    .tog-menu{
+    /* .tog-menu{
         width: 33vw;
-    }
+    } */
 
     /* section 1 */
     .grid-item{
@@ -504,7 +504,7 @@ footer{
 @media screen and (min-width:1024px) {
 
      /* header */
-     .head{
+     /* .head{
         width: 100%;
     }
 
@@ -535,7 +535,7 @@ footer{
 
     .toggle{
         display: none;
-    }
+    } */
     
     /* section 1 */
     .a-show{
@@ -573,7 +573,7 @@ footer{
 /* pc 1440px */
 @media screen and (min-width:1440px) {
       /* all seclect */
-      header{
+      /* header{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -594,7 +594,7 @@ footer{
 
     .search-img{
         display: block;
-    }
+    } */
 
     section{
         width: 100%;
@@ -609,7 +609,7 @@ footer{
         max-width: 1200px;
     }
 
-    .menu-container{
+    /* .menu-container{
         display: block;
     }
 
@@ -624,7 +624,7 @@ footer{
     
     .toggle{
         display: none;
-    }
+    } */
 
     
 
