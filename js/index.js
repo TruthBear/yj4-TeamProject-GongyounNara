@@ -8,7 +8,8 @@ const paintData = (data, elementTag) => {
   const section = document.querySelector(elementTag);
   section.innerHTML = "";
   data.db.forEach(item => {
-    const popShow = document.createElement('div');
+    const popShow = document.createElement('a');
+    popShow.setAttribute('href', `detail.php?code=${item.mt20id}`);
     popShow.classList.add('pop-show');
 
     const showImg = document.createElement('div');
@@ -57,7 +58,8 @@ const boxOfficeApi = async ( locationCode ) => {
   const section = document.querySelector('.one .pop');
   section.innerHTML = "";
   for(let i=0;i<5;i++){
-    const popShow = document.createElement('div');
+    const popShow = document.createElement('a');
+    popShow.setAttribute('href', `detail.php?code=${item.mt20id}`);
     popShow.classList.add('pop-show');
 
     const showImg = document.createElement('div');

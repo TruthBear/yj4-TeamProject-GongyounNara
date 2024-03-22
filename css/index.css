@@ -409,6 +409,12 @@ header{
     flex-direction: column;
 }
 
+/* 목록 pop-show 태그 */
+
+.pop-show {
+  color: black;
+}
+
 /* section 1 */
 
 .popular{
@@ -426,6 +432,8 @@ header{
     gap: 20px;
     padding-top: 15px;
 }
+
+
 
 .pop .pop-show:last-child{
     margin-right: 20px;

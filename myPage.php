@@ -13,8 +13,8 @@
     <?php include './components/header.php' ?>
   </header>
   <div class="wrap">
-    <div class="profile">
-      <div>
+    <div class="profile-box">
+      <div class="profile">
         <div class="profile-image">
           <img class=user-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAC9nkUrOYr_nZKahjeZAMtS03mfddn6iXxw&usqp=CAU"/>
           <img class="edit-icon" src="./assets/icons/edit.png"/>
@@ -22,7 +22,7 @@
         <div class="user-name">이름</div>
         <div class="user-email">email222@gmail.com</div>
       </div>
-    <section class="my-profile">
+    <section class="my-profile"> 
         <div class="tag">내 프로필</div>
         <div class="profile-info">
           <div class="info-box">
