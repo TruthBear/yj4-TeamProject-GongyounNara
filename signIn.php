@@ -11,7 +11,9 @@
   <div class="wrap">
     <section class="sign-in">
       <div class="icon">
-        <img src="./assets/icons/arrow.png"/>
+        <a href="#" onclick="history.back()">
+          <img src="./assets/icons/arrow.png"/>
+        </a>
       </div>
       <div class="login">
         <h1>공연나라</h1>
@@ -37,7 +39,9 @@
         <div class="find-button">
           <div>아이디 찾기</div>
           <div>비밀번호 찾기</div>
-          <div>회원가입</div>
+          <a href="#">
+            <div>회원가입</div>
+          </a>
         </div>
         </form>
         <!-- 에러  -->
