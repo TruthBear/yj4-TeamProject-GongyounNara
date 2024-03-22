@@ -36,10 +36,10 @@
                             <div class='area-name'>
                                 문화대극장
                             </div>
-                        </div>
-                        <!-- 가격보기 -->
-                        <div class='show-price'>
-                            <p>가격 보기</p>
+                            <!-- 가격보기 -->
+                            <div class='show-price'>
+                                <p>가격 보기</p>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -133,7 +133,7 @@
                         <img src="./assets/img/mout.jpg" alt="">
                     </div>
                     <div class ='info-btn'>
-                        <button><img src="./assets/icons/img-arrow.png" alt=""></button>
+                        <button>공연정보 더보기</button>
                     </div>
                 </div>
             </div>

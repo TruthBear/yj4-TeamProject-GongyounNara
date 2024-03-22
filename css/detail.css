@@ -461,7 +461,7 @@ header{
 
     .detail .detail-seasson{
         margin-left: 15px;
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .detail-seasson div:first-child{
@@ -513,8 +513,13 @@ header{
 
     .info-btn button{
         background: none;
-        outline: none;
-        border: none;
+        padding: 15px 18px 15px 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .info-btn button:hover{
+        background: #E9E8EC;
     }
 
     /* section2: 지도 */
@@ -615,12 +620,11 @@ header{
     }
 
     .fronts{
-        top:80px
+        top:150px
     }
 
-    .poast-img{
-        width: 300px;
-        height: 420px;
+    .poast-des{
+        padding-top: 250px;
     }
 
     .poast-area{
@@ -681,5 +685,36 @@ header{
 
     .toggle{
         display: none;
+    }
+
+    /* section 1 */
+    .fronts{
+        flex-direction: row-reverse;
+    }
+
+    .poast-img{
+        width: 300px;
+        height: 420px;
+        margin-left: 189px;
+    }
+
+    .area-name{
+        font-size: 39px;
+    }
+
+    .show-price{
+        width: 360px;
+    }
+
+    /* section 2 */
+    .info-details{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .info-details h2{
+        font-size: 32px;
+        margin-bottom: 40px;
+        margin-left: 12px;
     }
 }
