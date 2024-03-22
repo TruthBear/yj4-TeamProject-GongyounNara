@@ -11,7 +11,6 @@ button.addEventListener('click', function() {
 
 
 // 가격보기 작동
-let temp = false 
 document.addEventListener("DOMContentLoaded", function() {
     var showPrice = document.querySelector('.show-price');
     var userNeeds = document.querySelector('.three');
