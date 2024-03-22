@@ -11,6 +11,7 @@ button.addEventListener('click', function() {
 
 
 // 가격보기 작동
+let temp = false 
 document.addEventListener("DOMContentLoaded", function() {
     var showPrice = document.querySelector('.show-price');
     var userNeeds = document.querySelector('.three');
@@ -20,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (item.isIntersecting) {
                 userNeeds.style.height = '0';
                 userNeeds.style.opacity = '0';
+                console.log(item);
             } else {
                 userNeeds.style.height = '104px';
                 userNeeds.style.opacity = '1';
+                console.log(item);
             }
         });
     });

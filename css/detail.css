@@ -344,7 +344,7 @@ header{
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 75vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -362,7 +362,7 @@ header{
     }
 
     .fronts{
-        top: 30px;
+        top: 60px;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -402,9 +402,9 @@ header{
     }
 
     .show-price{
-        position: absolute;
         width: 335px;
         height: 50px;
+        margin-top: 20px;
         background-color: #08a5c0;
         border-radius: 50px;
         bottom: 27px;
@@ -445,6 +445,7 @@ header{
     .show-info{
         margin-top: 20px;
         margin-left: 20px;
+
     }
 
     .show-info h2{
@@ -542,26 +543,24 @@ header{
 
     /* section 3 */
     .three{
+        position: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: fixed;
         background-color: #fff;
         width: 100%;
         bottom: 0;
         overflow: hidden;
-        transition: height 0.2s;
+        transition: 0.3s;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.7);
     }
 
-    
     .three .user-needs{
         padding: 27px 27px;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: -7px 0 7px rgba(0, 0, 0, 0.7);
     }
-
 
     .user-needs div:first-child{
         width: 50px;
@@ -588,24 +587,24 @@ header{
     }
 
 /* footer */
-footer{
-    background-color: #000;
-    color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 12px;
-    margin-bottom: 106px;
-}
+    footer{
+        background-color: #000;
+        color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 12px;
+        margin-bottom: 106px;
+    }
 
-.foot{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .foot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.foot p{
-    margin-bottom: 6px;
-}
+    .foot p{
+        margin-bottom: 6px;
+    }
 
 /* tablet mode */
 @media screen and (min-width:768px) {

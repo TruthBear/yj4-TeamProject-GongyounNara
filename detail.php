@@ -37,10 +37,10 @@
                                 문화대극장
                             </div>
                         </div>
-                    </div>
-                    <!-- 가격보기 -->
-                    <div class='show-price'>
-                        <p>가격 보기</p>
+                        <!-- 가격보기 -->
+                        <div class='show-price'>
+                            <p>가격 보기</p>
+                        </div>
                     </div>
             </div>
         </section>
@@ -53,13 +53,14 @@
                 <div><a href="#show-area">공연 시설</a></div>
             </div>
             <!-- 공연 정보 -->
-            <div class='show-info' id='show-detail'>
+            <div  id='show-detail'></div>
+            <div class='show-info'>
                 <!-- 공연 상세정보 -->
-                <di class='info-details' >
+                <div class='info-details' >
                     <h2 >공연 상세정보</h2>
                     <!-- 정보 항목 -->
-                <div class='detailss'>
-                    <div class='details'>
+                    <div class='detailss'>
+                        <div class='details'>
                             <div class='detail'>
                                 <div>
                                     <img src="./assets/icons/seasson.png" alt="">
@@ -69,7 +70,6 @@
                                     <div>2024.02.01 ~ 2024.04.05</div>
                                 </div>
                             </div>
-                        
                         </div>
                         <div class='details'>
                             <div class='detail'>
@@ -126,18 +126,20 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
-                </div>
-                <!-- 공연 정보 이미지 -->
-                <div class='info-imgs'>
-                    <img src="./assets/img/mout.jpg" alt="">
-                </div>
-                <div class ='info-btn'>
-                    <button><img src="./assets/icons/img-arrow.png" alt=""></button>
+                    <!-- 공연 정보 이미지 -->
+                    <div class='info-imgs'>
+                        <img src="./assets/img/mout.jpg" alt="">
+                    </div>
+                    <div class ='info-btn'>
+                        <button><img src="./assets/icons/img-arrow.png" alt=""></button>
+                    </div>
                 </div>
             </div>
             <!-- 공연시설 및 지도 api -->
-            <div class='maps'  id='show-area'>
+            <div id='show-area'></div>
+            <div class='maps'>
                 <h2>공연 시설</h2>
                 <!-- 공연장 이름 -->
                 <div class='map-name'>
