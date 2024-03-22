@@ -511,15 +511,17 @@ footer{
 
 /* pc */
 @media screen and (min-width:1024px){
-  .profile{
+  .profile-box{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 764px;
+    margin: 0 auto;
+  }
+  .profile{
     margin: 0 auto;
   }
   .my-profile{
     margin:0;
-    margin-left: 114px;
     width: 508px;
   }
   .like-list{
@@ -528,7 +530,7 @@ footer{
     margin: 0 auto;
   }
   .thumbnail-container{
-    padding: 34px 70px;
+    padding: 30px 50px;
   }
   .thumbnail-box{
     display: grid;
