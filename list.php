@@ -28,7 +28,9 @@
                 </div>
                 <div class="day-age">
                     <div class="open-calendar">
-                      날짜
+                      <div class="click-date">
+                        날짜
+                      </div>
                       <?php include './components/calendar.php'?>
                     </div>
                     <input type="checkbox" name="kid" id="kid">
