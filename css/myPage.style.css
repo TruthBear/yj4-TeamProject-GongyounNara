@@ -458,9 +458,10 @@ display: none;
 }
 .show-name{
   position: absolute;
-  width: 100%;
-  bottom: -40px;
+  width: 95%;
+  bottom: -42px;
   margin-top: 18px;
+  padding-left: 7%;
   font-weight: 500;
   font-size: 18px;
   overflow: hidden;
