@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/detail.css">
     <script src="./js/toggleMenu.js" defer></script>
-    <script src='./js/detail.js' defer></script>
+    <script type="module" src='./js/detail.js'></script>
 </head>
 
 <body>
