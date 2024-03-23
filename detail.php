@@ -68,7 +68,7 @@
                                 </div>
                                 <div class='detail-seasson'>
                                     <div>공연기간</div>
-                                    <div>2024.02.01 ~ 2024.04.05</div>
+                                    <div class='seasson'>2024.02.01 ~ 2024.04.05</div>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 </div>
                                 <div class='detail-seasson'>
                                     <div>공연 장르</div>
-                                    <div>연극</div>
+                                    <div class='genre'>연극</div>
                                 </div>
                             </div>
                         </div>
@@ -89,8 +89,8 @@
                                     <img src="./assets/icons/runtime.png" alt="">
                                 </div>
                                 <div class='detail-seasson'>
-                                    <div>공연 런타임</div>
-                                    <div>1시간 30분</div>
+                                    <div>공연 시간</div>
+                                    <div class='runtime'>1시간 30분</div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class='detail-seasson'>
                                     <div>공연 관람 연령</div>
-                                    <div>만 7세 이상</div>
+                                    <div class='age'>만 7세 이상</div>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class='detail-seasson'>
                                     <div>출연진</div>
-                                    <div>톰 홀랜드, 빌 게이츠, 아인슈타인</div>
+                                    <div class='cast'>톰 홀랜드, 빌 게이츠, 아인슈타인</div>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                 </div>
                                 <div class='detail-seasson'>
                                     <div>제작진</div>
-                                    <div>손흥민</div>
+                                    <div class='pd'>손흥민</div>
                                 </div>
                             </div>
                         </div>
@@ -146,8 +146,8 @@
                 <div class='map-name'>
                     <img src="./assets/icons/location.png" alt="">
                     <div>
-                        <div>아리아트홀</div>
-                        <div>서울특별시 종로구 대학로 8가 30 (동숭동)</div>
+                        <div class='location-name'>아리아트홀</div>
+                        <div class='show-location'>서울특별시 종로구 대학로 8가 30 (동숭동)</div>
                     </div>
                 </div>
                 <!-- 공연장소 api -->

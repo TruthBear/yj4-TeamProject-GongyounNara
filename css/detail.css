@@ -404,7 +404,7 @@ header{
     .show-price{
         width: 335px;
         height: 50px;
-        margin-top: 46px;
+        margin-top: 25px;
         background-color: #08a5c0;
         border-radius: 50px;
         bottom: 27px;
@@ -459,6 +459,10 @@ header{
         align-items: center;
     }
 
+    .detail img{
+        width: 20px;
+    }
+
     .detail .detail-seasson{
         margin-left: 15px;
         font-size: 16px;
@@ -475,11 +479,12 @@ header{
     /* section2: 인포 이미지 부분 */
     .info-imgs {
         position: relative;
-        margin: 20px;
+        margin-right: 20px;
         height: 463px;
         overflow: hidden;
         transition: height 0.3s ease;
         z-index: -1;
+        object-fit: fill;
     }
     
     .info-imgs.show{
@@ -502,7 +507,7 @@ header{
     
     .info-imgs img {
         width: 100%;
-        height: 150vh;
+        height: auto;
     }
     
     .info-btn{
@@ -516,6 +521,7 @@ header{
         padding: 15px 18px 15px 18px;
         font-weight: bold;
         cursor: pointer;
+        margin: 20px 23px 0 0;
     }
 
     .info-btn button:hover{

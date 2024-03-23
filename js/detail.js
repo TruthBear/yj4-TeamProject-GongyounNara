@@ -13,6 +13,39 @@ const showDetailApi = async ( code ) => {
 
   console.log(data);
   placeDetailApi(data.db.mt10id);
+
+  const BackImg = document.querySelector('.back-img');
+  BackImg.setAttribute('src', data.db.poster);
+
+  const PostImg = document.querySelector('.poast-img img');
+  PostImg.setAttribute('src', data.db.poster)
+
+  const PostArea = document.querySelector('.poast-area');
+  PostArea.innerHTML= data.db.area;
+
+  const AreaName = document.querySelector('.area-name');
+  AreaName.innerHTML = data.db.fcltynm;
+
+  const ShowSeason = document.querySelector('.seasson');
+  ShowSeason.innerHTML = data.db.prfpdfrom + ' ~ ' + data.db.prfpdto;
+
+  const ShowGenre = document.querySelector('.genre');
+  ShowGenre.innerHTML = data.db.genrenm;
+
+  const RunTime = document.querySelector('.runtime');
+  RunTime.innerHTML =data.db.prfruntime;
+
+  const Age = document.querySelector('.age');
+  Age.innerHTML  = data.db.prfage;
+
+  const Cast = document.querySelector('.cast');
+  Cast.innerHTML = data.db.prfcast;
+
+  const Pd = document.querySelector('.pd');
+  Pd.innerHTML = data.db.prfcrew;
+
+  const InfoImg = document.querySelector('.info-imgs img');
+  InfoImg.setAttribute('src', data.db.styurls.styurl);
 } 
 
 // 시설 상세 정보 api
@@ -22,6 +55,12 @@ const placeDetailApi = async ( code ) => {
     query: "&newsql=Y",
   })
   console.log(data);
+
+  const MapName = document.querySelector('.location-name');
+  MapName.innerHTML = data.db.fcltynm;
+
+  const Location = document.querySelector('.show-location');
+  Location.innerHTML = data.db.adres;
 }
 
 showDetailApi(code);
