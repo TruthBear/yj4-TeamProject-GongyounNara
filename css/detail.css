@@ -552,6 +552,16 @@ header{
         color: #b5b5b5;
     }
 
+    .kakao-map{
+        width: 100%;
+        height: 300px;
+    }
+
+    #map{
+        width: 100%;
+        height: 100%;
+    }
+
     /* section 3 */
     .three{
         position: fixed;

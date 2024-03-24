@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src='./js/detail.js'></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a75f6db1726414effe55a0976b9eb28b"></script>
 </head>
 
 <body>
@@ -151,7 +152,10 @@
                     </div>
                 </div>
                 <!-- 공연장소 api -->
-                <div></div>
+                <div class='kakao-map'>
+                    <div id='map' >
+                    </div>
+                </div>
             </div>
         </section>
 
