@@ -1,6 +1,8 @@
 import { apiController } from "../api/apiController.js";
+import { today } from "../config/date.js";
 
 const options = Array.from(document.getElementsByClassName('option'));
+
 
 
 // 공연목록API용 출력 함수
@@ -52,14 +54,14 @@ const paintData = (data, elementTag) => {
 const boxOfficeApi = async ( locationCode ) => {
   const data = await apiController({
     url: "http://kopis.or.kr/openApi/restful/boxoffice?",
-    query: `&ststype=week&date=20240318&area=${locationCode}`
-  })
+    query: `&ststype=week&date=${today}&area=${locationCode}`
+  }) 
 
   const section = document.querySelector('.one .pop');
   section.innerHTML = "";
   for(let i=0;i<5;i++){
     const popShow = document.createElement('a');
-    popShow.setAttribute('href', `detail.php?code=${item.mt20id}`);
+    popShow.setAttribute('href', `detail.php?code=${data.boxof[i].mt20id}`);
     popShow.classList.add('pop-show');
 
     const showImg = document.createElement('div');
@@ -102,7 +104,7 @@ const boxOfficeApi = async ( locationCode ) => {
 const nowShwoingApi = async ( locationCode ) => {
   const data = await apiController({
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240301&eddate=20240318&cpage=1&rows=5&prfstate=02&newsql=Y&signgucode=${locationCode}`,
+    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=5&prfstate=02&newsql=Y&signgucode=${locationCode}`,
   })
 
   paintData(data, '.two .pop');

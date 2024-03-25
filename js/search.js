@@ -1,10 +1,5 @@
 import { apiController } from "../api/apiController.js";
-
-// function prints() {
-//     const printName = document.querySelector('.printName').value;
-//     const quotedPrintName = `"${printName}"`; 
-//     document.querySelector(".print-result").textContent = quotedPrintName;
-// }  
+import { today } from "../config/date.js";
 
 const paintData = (data) => {
   const searchsShow = document.getElementsByClassName('searchs-show')[0];
@@ -67,7 +62,7 @@ const paintData = (data) => {
 const showData = async (searchWord) => {
   const data = await apiController({
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240101&eddate=20241231&cpage=1&rows=5&prfstate=02&signgucode=11&shprfnm=${searchWord}&newsql=Y`
+    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=5&prfstate=02&signgucode=11&shprfnm=${searchWord}&newsql=Y`
   });
   paintData(data);
 }

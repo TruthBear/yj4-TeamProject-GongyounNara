@@ -1,4 +1,5 @@
 import { apiController } from "../api/apiController.js";
+import { today } from "../config/date.js";
 
 const options = Array.from(document.getElementsByClassName('option'));
 
@@ -121,7 +122,7 @@ const convertNameToCode = (locationName) => {
 const showListApi = async (genre, kid, locationCode) => {
   const obj = {
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=${locationCode}&newsql=Y&shcate=${genre}&kidstate=${kid}`,
+    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=10&signgucode=${locationCode}&newsql=Y&shcate=${genre}&kidstate=${kid}`,
   }
   const data = await apiController(obj);
   paintData(data, "area-show")
