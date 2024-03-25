@@ -352,8 +352,8 @@ header{
 
     .back .back-img{
         position: absolute;
-        width: 220%;
-        height: 180vh;
+        width: 120%;
+        height: 140vh;
         object-position: center;
         top: 70%;
         left: 50%;
@@ -389,7 +389,16 @@ header{
     }
 
     .poast-des div{
-        margin-bottom: 10px;
+        margin-bottom: 3px;
+    }
+
+    .poast-des div:first-child{
+        display: flex;
+        align-items: center;
+    }
+
+    .poast-des div:first-child img{
+        margin-right: 5px;
     }
 
     .poast-area{
@@ -442,6 +451,11 @@ header{
         border-bottom: 3px solid #FEC100;
     }
 
+    /*  */
+   .showing {
+        border-bottom: 3px solid #FEC100;
+    }    
+    
     .show-info{
         margin-top: 20px;
         margin-left: 20px;
@@ -449,7 +463,7 @@ header{
     }
 
     .show-info h2{
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
     }
 
@@ -475,6 +489,23 @@ header{
     .detail-seasson div:nth-child(2){
         color: #b5b5b5;
     }
+
+    .show-schedule{
+        margin-bottom: 20px;
+    }
+
+    .show-schedule div:first-child{
+        font-weight: bold;
+        font-size: 16px;        
+    }
+
+   .schedule p{
+        border-bottom: 2px solid #E9E8EC;
+        padding: 10px 0 10px 0;
+        width: 90%;
+    }
+
+
 
     /* section2: 인포 이미지 부분 */
     .info-imgs {
@@ -555,6 +586,7 @@ header{
     .kakao-map{
         width: 100%;
         height: 300px;
+        z-index: -3;
     }
 
     #map{
@@ -636,15 +668,15 @@ header{
     }
 
     .back{
-        height: 100vh;
+        height: 75vh;
     }
 
-    .fronts{
-        top:150px
+    .poast-img{
+        margin-top: 90px;
     }
 
     .poast-des{
-        padding-top: 246px;
+        padding-top: 170px;
     }
 
     .poast-area{
@@ -670,6 +702,10 @@ header{
 
     .details{
         width: 50%;
+    }
+    
+    #show-area{
+        margin-top: 75px;
     }
 }
 
@@ -708,8 +744,20 @@ header{
     }
 
     /* section 1 */
+    .two{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .fronts{
         flex-direction: row-reverse;
+    }
+
+    .show-info{
+        width: 100%;
+        max-width: 1280px;
     }
 
     .poast-img{
@@ -729,12 +777,21 @@ header{
     /* section 2 */
     .info-details{
         margin-top: 40px;
-        margin-left: 40px;
     }
 
     .info-details h2{
         font-size: 32px;
         margin-bottom: 40px;
         margin-left: 12px;
+    }
+
+    #show-area{
+        margin-top: 60px;
+    }
+
+    .maps{
+        margin: 20px 40px 40px 40px;
+        max-width: 1200px;
+        width: 100%;
     }
 }

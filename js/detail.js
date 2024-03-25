@@ -1,5 +1,6 @@
 import { apiController } from "../api/apiController.js";
 
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const code = urlParams.get('code');
@@ -14,39 +15,52 @@ const showDetailApi = async (code) => {
   console.log(data);
   placeDetailApi(data.db.mt10id, data.db.lo, data.db.la);
 
-  const BackImg = document.querySelector('.back-img');
-  BackImg.setAttribute('src', data.db.poster);
+  const setData = (selector, value) => {
+    const element = document.querySelector(selector);
+    if (element && value !== undefined && value !== null && value !== "") {
+      if (typeof value === 'object') {
+        element.innerText = "해당 정보가 없습니다.";
+      } else {
+        if (selector.includes('img')) {
+          element.setAttribute('src', value);
+        } else {
+          element.innerText = value;
+  }};
+    } else {
+      element.innerText = "해당 정보가 없습니다.";
+    }};
 
-  const PostImg = document.querySelector('.poast-img img');
-  PostImg.setAttribute('src', data.db.poster)
+  setData('.back-img', data.db.poster);
+  setData('.poast-img img', data.db.poster);
+  setData('.poast-area', data.db.area);
+  setData('.area-name', data.db.fcltynm);
+  setData('.seasson', `${data.db.prfpdfrom} ~ ${data.db.prfpdto}`);
+  setData('.genre', data.db.genrenm);
+  setData('.runtime', data.db.prfruntime);
+  setData('.age', data.db.prfage);
+  setData('.cast', data.db.prfcast);
+  setData('.pd', data.db.prfcrew);
 
-  const PostArea = document.querySelector('.poast-area');
-  PostArea.innerHTML = data.db.area;
-
-  const AreaName = document.querySelector('.area-name');
-  AreaName.innerHTML = data.db.fcltynm;
-
-  const ShowSeason = document.querySelector('.seasson');
-  ShowSeason.innerHTML = data.db.prfpdfrom + ' ~ ' + data.db.prfpdto;
-
-  const ShowGenre = document.querySelector('.genre');
-  ShowGenre.innerHTML = data.db.genrenm;
-
-  const RunTime = document.querySelector('.runtime');
-  RunTime.innerHTML = data.db.prfruntime;
-
-  const Age = document.querySelector('.age');
-  Age.innerHTML = data.db.prfage;
-
-  const Cast = document.querySelector('.cast');
-  Cast.innerHTML = data.db.prfcast;
-
-  const Pd = document.querySelector('.pd');
-  Pd.innerHTML = data.db.prfcrew;
+  const Schedule = document.querySelector('.schedule');
+  if (Schedule && data.db.dtguidance && data.db.dtguidance !== "") {
+    Schedule.innerHTML = ''; // Clear existing schedule
+    const dtguidance = data.db.dtguidance.split(',');
+    dtguidance.forEach(item => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = item.trim(); 
+      Schedule.appendChild(paragraph); 
+    });
+  } else {
+    Schedule.innerText = "해당 정보가 없습니다.";
+  };
 
   const InfoImg = document.querySelector('.info-imgs img');
-  InfoImg.setAttribute('src', data.db.styurls.styurl);
-}
+  if (InfoImg && data.db.styurls && data.db.styurls.styurl) {
+    InfoImg.setAttribute('src', data.db.styurls.styurl);
+  } else {
+    InfoImg.setAttribute('src', "해당 정보가 없습니다.");
+  }};
+
 
 // 시설 상세 정보 api
 const placeDetailApi = async (code) => {
@@ -57,10 +71,10 @@ const placeDetailApi = async (code) => {
   console.log(data);
 
   const MapName = document.querySelector('.location-name');
-  MapName.innerHTML = data.db.fcltynm;
+  MapName.innerText = data.db.fcltynm;
 
   const Location = document.querySelector('.show-location');
-  Location.innerHTML = data.db.adres;
+  Location.innerText = data.db.adres;
 
   const longitude = data.db.lo; // 경도
   const latitude = data.db.la;   // 위도
@@ -123,4 +137,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   observer.observe(showPrice);
+});
+
+
+
+// Intersection Observer를 사용하여 특정 ID에 대한 링크가 화면에 나타날 때 CSS 효과를 적용
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const targetId = entry.target.getAttribute('id');
+        console.log(targetId);
+        const correspondingLink = document.querySelector(`.wrap-${targetId}`);
+        if (entry.isIntersecting) {
+            correspondingLink.classList.add('showing');
+        } else {
+            correspondingLink.classList.remove('showing');
+        }
+    });
+});
+// 관찰할 ID 목록
+const targetIds = ['#show-detail', '#show-area'];
+// 각 ID에 대한 Intersection Observer 관찰
+targetIds.forEach(id => {
+    const target = document.querySelector(id);
+    if (target) {
+        observer.observe(target);
+    }
 });
