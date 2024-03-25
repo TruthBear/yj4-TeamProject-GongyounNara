@@ -43,13 +43,6 @@ if(isset($_SESSION["user_role"])) {
 } else {
   $user_role = "";
 }
-
-// echo "
-// <script>
-// console.log('$user_id, $user_name, $user_profile, $user_email, $user_social_type, $user_role');
-// </script>
-// ";
-
 ?>
 
 
@@ -64,7 +57,6 @@ if(isset($_SESSION["user_role"])) {
       <div class="menu-container">
           <ul>
             <li><a href="./list.php">공연목록</a></li>
-            <li><a href="">menu 2</a></li>
           </ul>
       </div> 
   </div>
@@ -109,14 +101,14 @@ if(isset($_SESSION["user_role"])) {
               </div>
               <ul class="user-list">
                   <li class="user user-hidden" >
-                    <a href="#">
+                    <a href="mypage.php">
                       <div><?=$user_name?></div>
                       <div>프로필 보기</div>
                     </a>
                   </li>
                   <?php 
                     if($user_role == "관리자") {
-                      echo '<li class="user user-hidden" ><a href="#">관리자 페이지</a></li>';
+                      echo '<li class="user user-hidden" ><a href="adminPage.php">관리자 페이지</a></li>';
                     } 
                   ?>
                   <?php 
@@ -160,7 +152,7 @@ if(isset($_SESSION["user_role"])) {
                 ?>
                   <ul class="id">
                     <li>
-                      <a href="#" class="toggle-user-wrap">
+                      <a href="mypage.php" class="toggle-user-wrap">
                         <div class="toggle-user-img-wrap">
                           <img src=<?=$user_profile?> alt="User Profile Image">
                         </div>
@@ -178,8 +170,6 @@ if(isset($_SESSION["user_role"])) {
                       <ul class="menu">
                         <li><a href="./search.php">공연검색</a></li>
                         <li><a href="./list.php">공연목록</a></li>
-                        <li><a href="#">메뉴1</a></li>
-                        <li><a href="#">메뉴1</a></li>
                       </ul>
                   </div>
                   <div>
@@ -195,7 +185,7 @@ if(isset($_SESSION["user_role"])) {
                     ?>
                       <ul class="as">
                         <?php if($user_role == "관리자") {
-                          echo '<li><a href="#">관리자 페이지</a></li>';
+                          echo '<li><a href="adminPage.php">관리자 페이지</a></li>';
                         } ?>
                           <li><a href="logout.php">로그아웃</a></li>
                       </ul>
