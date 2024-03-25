@@ -12,6 +12,23 @@
   <header>
     <?php include './components/header.php' ?>
   </header>
+  <?php
+    if(!isset($_SESSION['user_role'])) {      
+      echo "
+        <script>
+          alert('로그인 해주세요.');
+          history.go(-1);  
+        </script>
+      ";       
+    } else if($user_role != "관리자") {
+      echo "
+        <script>
+          alert('관리자가 아닙니다.');
+          history.go(-1);  
+        </script>
+      ";
+    }
+  ?>
   <!-- 모바일 -->
   <div class="mobile-wrap">
     <section>
