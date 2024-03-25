@@ -22,6 +22,7 @@
 .header img{
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .calendar-title{
   font-weight: 700;
@@ -89,6 +90,7 @@ h3{
 .dates li{
   font-weight: 700;
   font-size: 18px;
+  cursor: pointer;
 }
 /* .dates li.today{
   color: #fff;

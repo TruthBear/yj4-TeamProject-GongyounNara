@@ -304,6 +304,14 @@ label {
     border-radius: 30px;
 }
 
+.open-calendar {
+  cursor: pointer;
+}
+
+.open-calendar .wrap {
+  cursor: auto;
+}
+
 .day-age label{
   background-color: #E9E8EC;
   padding: 5px 10px;

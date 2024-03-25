@@ -1,6 +1,9 @@
 import { apiController } from "../api/apiController.js";
+import { selectedDay, select } from "./calendar.js";
 
 const options = Array.from(document.getElementsByClassName('option'));
+
+console.log(selectedDay);
 
 
 // 리스트페이지API 출력 함수
@@ -121,14 +124,14 @@ const convertNameToCode = (locationName) => {
 const showListApi = async (genre, kid, locationCode) => {
   const obj = {
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240312&eddate=20240312&cpage=1&rows=10&signgucode=${locationCode}&newsql=Y&shcate=${genre}&kidstate=${kid}`,
+    query: `&stdate=${selectedDay}&eddate=${selectedDay}&cpage=1&rows=10&signgucode=${locationCode}&newsql=Y&shcate=${genre}&kidstate=${kid}`,
   }
   const data = await apiController(obj);
   paintData(data, "area-show")
 }
 
 // 쿼리 업데이트 함수
-const updateQuery = () => {
+export const updateQuery = () => {
   const genre = document.querySelector('.genres input:checked')?.value;
   const kid = document.getElementById('kid').checked ? "Y" : "";
   const location = document.getElementById('location').innerText; 
@@ -165,6 +168,7 @@ const selectLocation = () => {
 }
 
 const init = () => {
+  select();
   showLocationList();
   selectLocation();
   updateGenre();

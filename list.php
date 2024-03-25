@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./css/calendar.css">
     <link rel="stylesheet" href="./css/header.css">
     <script src="./js/toggleMenu.js" defer></script>
-    <script type="module" src="./js/list.js" defer></script>
-    <script type="module" src="./js/calendar.js" defer></script>
+    <script type="module" src="./js/list.js"></script>
+    <script type="module" src="./js/calendar.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <!-- title -->
             <div class="title">
                 <div class="area">
-                    <strong><p>서울공연</p></strong>
+                    <strong><p><span id="location-title">서울</span>공연</p></strong>
                 </div>
                 <div class="day-age">
                     <div class="open-calendar">

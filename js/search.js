@@ -1,14 +1,8 @@
 import { apiController } from "../api/apiController.js";
-
-// function prints() {
-//     const printName = document.querySelector('.printName').value;
-//     const quotedPrintName = `"${printName}"`; 
-//     document.querySelector(".print-result").textContent = quotedPrintName;
-// }  
+import { today } from "../config/date.js";
 
 const paintData = (data) => {
   const searchsShow = document.getElementsByClassName('searchs-show')[0];
-  console.log(searchsShow);
   searchsShow.innerHTML = " ";
 
   if(Array.isArray(data.db) === true) {
@@ -27,7 +21,7 @@ const paintData = (data) => {
       searchDescription.classList.add('search-description');
 
       const ul = document.createElement('ul');
-
+    
       const title = document.createElement('li');
       const bold = document.createElement('strong');
       bold.innerText = item.prfnm;
@@ -63,13 +57,38 @@ const paintData = (data) => {
   }
 }
 
+const input = document.getElementsByTagName('input')[0];
+const options = Array.from(document.getElementsByClassName('option'));
 
-const showData = async (searchWord) => {
+
+const showData = async (searchWord, location) => {
   const data = await apiController({
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=20240101&eddate=20241231&cpage=1&rows=5&prfstate=02&signgucode=11&shprfnm=${searchWord}&newsql=Y`
+    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=5&prfstate=02&signgucode=${location}&shprfnm=${searchWord}&newsql=Y`
   });
   paintData(data);
+}
+
+const convertNameToCode = (locationName) => {
+  switch(locationName) {
+    case "서울": return "11";
+    case "인천": return "28";
+    case "세종": return "36";
+    case "대전": return "30";
+    case "광주": return "29";
+    case "울산": return "31";
+    case "대구": return "27";
+    case "부산": return "26";
+    default: return "11"; // 서울로 통일
+  }
+}
+
+// 쿼리 업데이트
+const updateQuery = () => {
+  const searchWord = input.value;
+  const location = document.getElementById('location').innerText;
+  const locationCode = convertNameToCode(location);
+  showData(searchWord, locationCode);
 }
 
 // 무분별한 api 요청을 막기위한 디바운스 함수
@@ -85,11 +104,39 @@ const debounce = (func, delay) => {
   };
 };
 
-const input = document.getElementsByTagName('input')[0];
+// 지역 선택 목록 on/off
+const showLocationList = () => {
+  const areaButton = document.getElementById('area-button');
+  areaButton.addEventListener('click', () => {
+    options.forEach(item => {
+      item.classList.toggle('option-hidden');
+    })
+  })
+}
+
+// 지역 선택
+const selectLocation = () => {
+  options.forEach(item => {
+    item.addEventListener('click', () => {
+      const location = document.getElementById('location');
+      location.innerText = item.innerText;
+      updateQuery();
+    })
+  })
+}
+
 input.addEventListener('keyup', debounce(() => {
-  const searchWord = input.value;
-  showData(searchWord);
-}, 500));  // 0.5초뒤 api 요청
+  if(input.value.length !== 0) {
+    updateQuery();
+  }
+}, 1000));  // 0.5초뒤 api 요청
+
+const init = () => {
+  selectLocation();
+showLocationList();
+}
+
+init();
 
 
 document.querySelectorAll('.search-area input').forEach(function(input) {

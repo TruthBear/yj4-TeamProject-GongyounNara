@@ -1,6 +1,10 @@
+import { today } from "../config/date.js";
+import { updateQuery } from "./list.js";
+
 const yearAndMonth=document.querySelector(".banner h3");
 const dates=document.querySelector(".dates");
 const navs=document.querySelectorAll("#prev,#next");
+export let selectedDay = today;
 
 const months=[
   "1월",
@@ -77,7 +81,7 @@ navs.forEach(nav=>{
 
 //날짜선택
 let selectedDate;
-function select() {
+export function select() {
   document.querySelectorAll(".dates li").forEach(function (day) {
     day.addEventListener("click", function () {
       document.querySelectorAll(".dates li").forEach(function (otherDay) {
@@ -85,14 +89,15 @@ function select() {
       });
       this.classList.add("selected");
       selectedDate = parseInt(this.textContent);
-      renderSelectedDateInfo();
+      selectedDay = renderSelectedDateInfo();
+      updateQuery();
     });
   });
 }
 
 function renderSelectedDateInfo() {
   let selectedDateInfo = year + ("00"+(month + 1).toString()).slice(-2) + ("00"+selectedDate.toString()).slice(-2);
-  console.log(selectedDateInfo);
+  return selectedDateInfo;
 }
 
 renderCalendar();
