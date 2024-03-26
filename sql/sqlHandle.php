@@ -32,7 +32,7 @@ if(isset($_POST)) {
     $message = "삭제완료";
     echo json_encode($message);
 
-  } else if($type = "check") {
+  } else if($type == "check") {
     $result = mysqli_query($db_connect, $sql);
     $num_record = mysqli_num_rows($result);
 
@@ -44,6 +44,41 @@ if(isset($_POST)) {
     $isDuplicate = true;
     echo json_encode($isDuplicate);
    }
+  } else if($type == "find") {
+    $email = $sql['email'];
+    $id = $sql['id'];
+
+    if($id == "") {
+      $sql = "select id from member where email='$email';";
+      $result = mysqli_query($db_connect, $sql);
+      $num_record = mysqli_num_rows($result);
+
+      $findId = array();
+
+      if($num_record) {
+        $findId['id'] = mysqli_fetch_row($result)[0];
+        $findId['type'] = "id";
+      } else {
+        $findId['type'] = "nope";
+      }
+      echo json_encode($findId);
+    } else {
+      $sql = "select password from member where email='$email' and id='$id'";
+      $result = mysqli_query($db_connect, $sql);
+      $num_record = mysqli_num_rows($result);
+
+      $findId = array();
+
+      if($num_record) {
+        $findId['password'] = mysqli_fetch_row($result)[0];
+        $findId['type'] = "password";
+      } else {
+        $findId['type'] = "nope";
+      }
+      echo json_encode($findId);
+    }
+
+    
   }
 }
 ?>

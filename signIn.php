@@ -37,7 +37,7 @@
         </div>
         <button class="button">로그인</button>
         <div class="find-button">
-          <a href="#">
+          <a href="finder.php">
             아이디/비밀번호 찾기
           </a>
           <a href="signUp.php">
