@@ -29,7 +29,7 @@ class social_login_repository {
       $created_at = date("Y-m-d H:i:s"); 
 
       $sql = "insert into member(id, email, password, name, profile_url, social_type, member_role, created_at)";
-      $sql .= "values('$profile_model->email', '$profile_model->email', $profile_model->uid, '$profile_model->name', '$profile_model->profile_picture', '$state', '$profile_model->member_role', '$created_at')";
+      $sql .= "values('$profile_model->email', '$profile_model->email', '$profile_model->uid', '$profile_model->name', '$profile_model->profile_picture', '$state', '$profile_model->member_role', '$created_at')";
 
       mysqli_query($this->db_connect, $sql);
       mysqli_close($this->db_connect);
