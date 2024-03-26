@@ -788,6 +788,7 @@ header{
 
     #second{
         display: flex;
+        justify-content: center;
     }
 
     /* section 2 */
