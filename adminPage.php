@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/header.css"/>
     <link rel="stylesheet" href="./css/adminPage.css"/>
     <title>Document</title>
+    <script type="module" src="./js/adminPage.js"></script>
 </head>
 <body>
   <div class="admin-page-wrap">
@@ -29,6 +30,7 @@
       ";
     }
   ?>
+
   <!-- 모바일 -->
   <div class="mobile-wrap">
     <section>
@@ -38,22 +40,6 @@
           <div class="m-num">번호</div>
           <div class="m-id">아이디</div>
         </div>
-        <div class="members-info">
-          <div class="m-num">4</div>
-          <div class="m-id">kd04205</div>
-        </div>
-        <div class="members-info">
-          <div class="m-num">3</div>
-          <div class="m-id">kd04205</div>
-        </div>
-        <div class="members-info">
-          <div class="m-num">2</div>
-          <div class="m-id">kd04205</div>
-        </div>
-        <div class="members-info">
-          <div class="m-num">1</div>
-          <div class="m-id">kd04205</div>
-        </div>
       </section>
     <div class="modal">
       <div class="modal-title">
@@ -62,23 +48,23 @@
       </div>
       <div class="members-detail">
         <div class="detail-sort">아이디</div>
-        <div class="detail-info">kd04205</div>
+        <div class="detail-info"></div>
       </div>
       <div class="members-detail">
         <div class="detail-sort">이메일</div>
-        <div class="detail-info">kd04205@naver.com</div>
+        <div class="detail-info"></div>
       </div>
       <div class="members-detail">
         <div class="detail-sort">이름</div>
-        <div class="detail-info">kd04205</div>
+        <div class="detail-info"></div>
       </div>
       <div class="members-detail">
         <div class="detail-sort">유형</div>
-        <div class="detail-info">일반 회원</div>
+        <div class="detail-info"></div>
       </div>
       <div class="members-detail">
         <div class="detail-sort">가입일</div>
-        <div class="detail-info">2024-03-21 16:42:15</div>
+        <div class="detail-info"></div>
       </div>
       <button class="delete">삭제</button>
     </div>
@@ -140,6 +126,5 @@
       <?php include './components/footer.php' ?>
     </footer>
   </div>
-  <script src="./js/adminPage.js"></script>
 </body>
 </html>
