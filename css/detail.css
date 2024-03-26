@@ -441,6 +441,14 @@ header{
         height: 100%;
     }
 
+    .user-needs svg {
+      fill: #fff;
+    }
+
+    .liked {
+      fill: #FFD700;
+    }
+
     .pc-prices .user-needs div:nth-child(2){
         margin-left: 15px;
     }

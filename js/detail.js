@@ -1,5 +1,5 @@
 import { apiController } from "../api/apiController.js";
-
+import { sqlController } from "../sql/sqlController.js";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -12,7 +12,6 @@ const showDetailApi = async (code) => {
     query: "&newsql=Y",
   });
 
-  console.log(data);
   placeDetailApi(data.db.mt10id, data.db.lo, data.db.la);
 
   const setData = (selector, value) => {
@@ -33,7 +32,7 @@ const showDetailApi = async (code) => {
   setData('.back-img', data.db.poster);
   setData('.poast-img img', data.db.poster);
   setData('.poast-area', data.db.area);
-  setData('.area-name', data.db.fcltynm);
+  setData('.area-name', data.db.prfnm);
   setData('.seasson', `${data.db.prfpdfrom} ~ ${data.db.prfpdto}`);
   setData('.genre', data.db.genrenm);
   setData('.runtime', data.db.prfruntime);
@@ -72,7 +71,57 @@ const showDetailApi = async (code) => {
     InfoImg.setAttribute('src', data.db.styurls.styurl);
   } else {
     InfoImg.setAttribute('src', "해당 정보가 없습니다.");
-  }};
+  }
+
+  
+
+  // 관심 목록
+  const userNeeds = document.getElementsByClassName('user-needs');
+  
+  const likedApi = async (typeData, id, title, posterUrl) => {
+    const data = await sqlController({
+      type: typeData,
+      sql: {
+        user_id: id,
+        performance_title: title,
+        performance_poster_url: posterUrl,
+      }
+    });
+
+    if(data.isLiked === true) {
+      for(const element of userNeeds) {
+        element.firstElementChild.firstElementChild.firstElementChild.classList.add('liked');
+      }
+    }
+  }
+
+  const isLogin = async () => {
+    return fetch('../api/isLogin.php')
+           .then(res => res.json())
+           .then(data => data);
+  }
+  const id = await isLogin();
+  const title = data.db.prfnm;
+  const poster = data.db.poster;
+  
+  if(id !== ""){
+    likedApi("liked",id, title, "");
+  }
+
+  for(const element of userNeeds) {
+    element.firstElementChild.addEventListener('click', () => {
+      if(id !== ""){
+        const likeIcon = element.firstElementChild.firstElementChild.firstElementChild;
+        likeIcon.classList.toggle('liked');
+        likedApi("pushLike",id, title, poster);
+      } else {
+        alert("로그인 해주세요!");
+      }
+    })
+  }
+  
+
+};
 
 
 // 시설 상세 정보 api
@@ -81,7 +130,6 @@ const placeDetailApi = async (code) => {
     url: `http://www.kopis.or.kr/openApi/restful/prfplc/${code}?`,
     query: "&newsql=Y",
   });
-  console.log(data);
 
   const MapName = document.querySelector('.location-name');
   MapName.innerText = data.db.fcltynm;
@@ -141,11 +189,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (item.isIntersecting) {
         userNeeds.style.height = '0';
         userNeeds.style.opacity = '0';
-        console.log(item);
       } else {
         userNeeds.style.height = '104px';
         userNeeds.style.opacity = '1';
-        console.log(item);
       }
     });
   });
@@ -158,7 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         const targetId = entry.target.getAttribute('id');
-        console.log(targetId);
         const correspondingLink = document.querySelector(`.wrap-${targetId}`);
         if (entry.isIntersecting) {
             correspondingLink.classList.add('showing');

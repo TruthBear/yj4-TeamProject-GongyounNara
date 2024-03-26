@@ -77,8 +77,43 @@ if(isset($_POST)) {
       }
       echo json_encode($findId);
     }
+  } else if($type == "liked") {
+    $user_id = $sql['user_id'];
+    $performance_title = $sql['performance_title'];
+    $isLiked = array();
 
+    $sql = "select * from liked where member_id='$user_id' and performance_title='$performance_title'";
+    $result = mysqli_query($db_connect, $sql);
+    $num_record = mysqli_num_rows($result);
+
+    if($num_record) {
+      $isLiked['isLiked'] = true;
+    }
+    echo json_encode($isLiked);
+
+  } else if($type == "pushLike") {
+    $user_id = $sql['user_id'];
+    $performance_title = $sql['performance_title'];
+    $performance_poster_url = $sql['performance_poster_url'];
     
+    $sql = "select * from liked where member_id='$user_id' and performance_title='$performance_title'";
+    $result = mysqli_query($db_connect, $sql);
+    $num_record = mysqli_num_rows($result);
+
+    if($num_record) {
+      $sql = "delete from liked where member_id='$user_id' and performance_title='$performance_title'";
+      mysqli_query($db_connect, $sql);
+
+      $message = "있슈";
+      echo json_encode($message);
+    } else {
+      $sql = "insert into liked(member_id, performance_title, performance_poster_url)";
+      $sql .= "values('$user_id', '$performance_title', '$performance_poster_url')";
+      mysqli_query($db_connect, $sql);
+      
+      $message = "없슈";
+      echo json_encode($message);
+    }
   }
 }
 ?>
