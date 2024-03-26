@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/header.css"/>
     <link rel="stylesheet" href="./css/adminPage.css"/>
-    <title>Document</title>
+    <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/adminPage.js"></script>
+    <title>Document</title>
 </head>
 <body>
   <div class="admin-page-wrap">

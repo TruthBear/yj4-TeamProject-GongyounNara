@@ -33,3 +33,24 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollDisabled = true;
   });
 });
+
+// user profile on/off
+const userLocationList = () => {
+  const userButton = document.querySelector('.user-btn');
+  const options = document.querySelectorAll('.user-list .user');
+  userButton.addEventListener('click', () => {
+    options.forEach(item => {
+      item.classList.toggle('user-hidden');
+      // 아이템을 눌렀을때 
+      item.addEventListener('click', () => {
+        options.forEach(item => {
+          item.classList.add('user-hidden')
+        })
+      })
+      // 옵션전체에 user-hidden 클라스를 추가하자
+    });
+  });
+};
+
+// 호출
+userLocationList();
