@@ -1,3 +1,5 @@
+import { sqlController } from "../sql/sqlController.js";
+
 document.addEventListener("DOMContentLoaded", function() {
   const signUpForm = document.querySelector(".sign-up-form");
   const passwordInput = document.querySelector(".password");
@@ -23,10 +25,77 @@ document.addEventListener("DOMContentLoaded", function() {
   // const icon=document.querySelectorAll("i");
   // console.log(icon)
 
+  let errors=false
+  let isCheck = {
+    id: false,
+    email: false,
+  }
+
+  const checkIdOrEmail = async (typeData, inputValue, valueType) => {
+    
+
+    let data;
+    if(valueType === "아이디") {
+      data =  await sqlController({
+        type: typeData,
+        sql: `select id from member where id='${inputValue}'`,
+      })
+    } else if(valueType === "이메일") {
+      data =  await sqlController({
+        type: typeData,
+        sql: `select email from member where email='${inputValue}'`,
+      })
+    }
+
+    if(data === false) {
+      alert(`중복된 ${valueType}입니다.`);
+      errors=true
+
+      if(valueType === "아이디") {
+        userIdError.style.display = "block";
+        idInputBox.classList.add("error");
+        idInput.classList.add("error-color");
+        userIcon.forEach(icon => {
+          icon.style.stroke = "red";
+        });
+        idInputBox.classList.remove("focus");
+      } else if(valueType === "이메일") {
+        userMailError.style.display = "block";
+        emailBox.classList.add("error");
+        emailInput.classList.add("error-color")
+        emailIcon.style.fill="red";
+        emailBox.classList.remove("focus");
+      }
+    } else {
+      alert(`사용가능한 ${valueType}입니다.`)
+      if(valueType === "아이디") {
+        isCheck.id = true;
+      } else if(valueType === "이메일") {
+        isCheck.email = true;
+      }
+    } 
+  }
+
+
+  const idCheckbutton = document.getElementsByClassName('check-button')[0];
+  idCheckbutton.addEventListener('click', (e) => {
+    e.preventDefault();
+    checkIdOrEmail('check', idInput.value, "아이디");
+  })
+
+  const emailCheckbutton = document.getElementsByClassName('check-button')[1];
+  emailCheckbutton.addEventListener('click', (e) => {
+    e.preventDefault();
+    checkIdOrEmail('check', emailInput.value, "이메일");
+  })
+
+  
+  
+
   signUpForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let errors=false
+    // let errors=false
 
     if (passwordInput.value !== password2Input.value) {
       unmatchPwError.style.display = "block";
@@ -94,11 +163,20 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       userNickError.style.display = "none";
     }
-    if (!errors){
-      signUpForm.submit();
+    
+    if(isCheck.id === true && isCheck.email === true){
+      errors === true;
+      if (!errors){
+        signUpForm.submit();
+
+        alert("회원가입이 완료되었습니다!");
+      }
+    } else {
+      alert("중복체크 해주세요!")
     }
 
   });
+
 
   //focus 
   //아이디

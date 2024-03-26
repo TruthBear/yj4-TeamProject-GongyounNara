@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/signUp.style.css"/>
+    <script type="module" src="./js/signUp.js"></script>
+    <script type="module" src="./js/signUpRemove.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,6 +43,7 @@
               <path class="mail" d="M1.615 12.6531C1.155 12.6531 0.771 12.5139 0.463 12.2356C0.154333 11.9566 0 11.6093 0 11.1935V1.45963C0 1.04388 0.154333 0.696826 0.463 0.418457C0.771 0.139486 1.155 0 1.615 0H16.385C16.845 0 17.229 0.139486 17.537 0.418457C17.8457 0.696826 18 1.04388 18 1.45963V11.1935C18 11.6093 17.846 11.9563 17.538 12.2347C17.2293 12.5136 16.845 12.6531 16.385 12.6531H1.615ZM9 6.4305L17 1.70365L16.692 0.903795L9 5.42277L1.308 0.903795L1 1.70365L9 6.4305Z" fill="#D9D9D9"/>
               </svg></div>
             <input class="email" type="email" placeholder="이메일" name="email"/>
+            <button class="check-button">중복확인</button>
           </div>
           <div class="name-box">
             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="50" viewBox="0 0 18 50" fill="none" >
@@ -62,7 +65,6 @@
       </form>
     </section>
   </div>
-  <script src="./js/signUp.js"></script>
-  <script src="./js/signUpRemove.js"></script>
+  
 </body>
 </html>

@@ -4,6 +4,8 @@ include "../config/const.php";
 
 $type;
 $sql;
+$message;
+$isDuplicate;
 
 if(isset($_POST)) {
   $data = file_get_contents("php://input");
@@ -22,16 +24,26 @@ if(isset($_POST)) {
         $arr[] = $row;
       }
     } 
-
     mysqli_close($db_connect);
-
     echo json_encode($arr);
+
   } else if($type == "delete") {
     mysqli_query($db_connect, $sql);
-    $message="삭제완료";
-    
+    $message = "삭제완료";
     echo json_encode($message);
-  } 
+
+  } else if($type = "check") {
+    $result = mysqli_query($db_connect, $sql);
+    $num_record = mysqli_num_rows($result);
+
+    if($num_record) {
+    $isDuplicate = false;
+    echo json_encode($isDuplicate);
   
+   }else {
+    $isDuplicate = true;
+    echo json_encode($isDuplicate);
+   }
+  }
 }
 ?>
