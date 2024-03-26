@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
 .wrap{
   max-width: 500px;
   margin: 0 auto;
@@ -15,6 +20,7 @@ header{
   position: fixed;
   padding-left: 20px;
 }
+
 .sign-up{
   width: 100%;
   padding-top: 100px;

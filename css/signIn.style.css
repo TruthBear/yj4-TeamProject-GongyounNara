@@ -77,11 +77,11 @@ a{
   justify-content: space-between;
   margin-top: 15px;
 }
-.find-button div{
+
+.find-button a {
   font-weight: 700;
   font-size: 14px;
   color:#B5B5B5;
-  cursor:default;
 }
 input:focus {outline:none;}
 .id-box{
