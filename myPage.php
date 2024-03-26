@@ -109,6 +109,31 @@
     <footer>
       <?php include './components/footer.php' ?>
     </footer>
+    <div class="background hidden">
+      <div class="modal">
+        <div class="modal-title">
+          <h2></h2>
+          <svg width="18" height="18" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 3L3 27M3 3L27 27" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="input-box name-box hidden">
+          <label for="name-change">새로운 닉네임:</label>
+          <input type="text" id="name-change">
+        </div>
+        <div class="input-box password-box hidden">
+          <label for="password-change">새로운 비밀번호:</label>
+          <input type="password" id="password-change">
+          <label for="password-change-check">새로운 비밀번호 확인:</label>
+          <input type="password" id="password-change-check">
+        </div>
+        <div class="input-box email-box hidden">
+          <label for="email-change">새로운 이메일:</label>
+          <input type="email" id="email-change">
+        </div>
+        <button>변경</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>

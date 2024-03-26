@@ -5,7 +5,6 @@ const pwFindEmail = document.getElementById('pw-find-email');
 const pwFindId = document.getElementById('pw-find-id');
 const idFindBtn = document.getElementsByClassName('find-btn')[0];
 const pwFindBtn = document.getElementsByClassName('find-btn')[1];
-const backBtn = document.querySelector('.form-title svg');
 
 const findApi = async (typeData, emailData, idData) => {
   const findData = await sqlController({

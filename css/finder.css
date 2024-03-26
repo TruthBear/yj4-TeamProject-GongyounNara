@@ -8,18 +8,6 @@ body {
   height: 100vh;
 }
 
-/* .wrap {
-  width: 80%;
-  max-width: 480px;
-  max-height: 422px;
-
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px 10px 0 0;
-  
-  overflow: hidden;
-  padding-bottom: 32px;
-} */
-
 .form-title {
   background: #000;
   width: 100%;

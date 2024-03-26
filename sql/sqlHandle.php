@@ -129,6 +129,15 @@ if(isset($_POST)) {
      } 
      mysqli_close($db_connect);
      echo json_encode($arr);
+  } else if($type == "update") {
+    $user_id = $sql['user_id'];
+    $update_value = $sql['update'];
+    $update_type = $sql['updateType'];
+    
+    $sql = "update member set $update_type='$update_value' where id='$user_id'";
+    mysqli_query($db_connect, $sql);
+    mysqli_close($db_connect);
+    echo json_encode("변경 완료");
   }
 }
 ?>
