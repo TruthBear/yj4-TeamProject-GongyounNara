@@ -54,6 +54,19 @@ const showDetailApi = async (code) => {
     Schedule.innerText = "해당 정보가 없습니다.";
   };
 
+  const PcSchedule = document.querySelector('.pc-schedule');
+  if (PcSchedule && data.db.dtguidance && data.db.dtguidance !== "") {
+    PcSchedule.innerHTML = ''; // Clear existing schedule
+    const PcDtguidance = data.db.dtguidance.split(',');
+    PcDtguidance.forEach(item => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = item.trim(); 
+      PcSchedule.appendChild(paragraph); 
+    });
+  } else {
+    PcSchedule.innerText = "해당 정보가 없습니다.";
+  };
+
   const InfoImg = document.querySelector('.info-imgs img');
   if (InfoImg && data.db.styurls && data.db.styurls.styurl) {
     InfoImg.setAttribute('src', data.db.styurls.styurl);

@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-html,body{
-    width: 100%;
-    overflow-x: hidden ;
-    height: 100vh;
-}
-
 a{
     text-decoration: none;
     color:white;
@@ -37,21 +31,6 @@ body.menu-opened::before {
 label{
     cursor: pointer;
   }
-
-.wrapper {
-    position:relative; 
-    min-height:100%;
-}
-
-.wrapper .list {
-    padding-bottom:100px;
-}
-
-.wrapper footer {
-    position:absolute; 
-    width:100%; 
-    bottom:0;
-}
 
 /* header */
 header{
@@ -427,6 +406,45 @@ header{
     }
 
 /* section 2 */
+    #second{
+        display: flex;
+
+    }
+
+    .pc-prices{
+        position: relative;
+        top: -25px;
+        display: none;
+        margin-left: 50px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 290px;
+        height: fit-content;
+        padding: 20px;
+        background: #fff;
+    }
+
+    .pc-prices .show-schedule div:first-child{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .pc-prices .show-schedule p{
+        border-bottom: 2px solid #E9E8EC;
+        padding: 10px 0 10px 0;
+        width: 95%;
+    }
+
+    .pc-prices .user-needs{
+        display: flex;
+        height: 100%;
+    }
+
+    .pc-prices .user-needs div:nth-child(2){
+        margin-left: 15px;
+    }
+
     .info-area{
         position: sticky;
         top: 0;
@@ -707,6 +725,10 @@ header{
     #show-area{
         margin-top: 75px;
     }
+
+    .kakao-map{
+        height: 500px;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -744,20 +766,10 @@ header{
     }
 
     /* section 1 */
-    .two{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  
 
     .fronts{
         flex-direction: row-reverse;
-    }
-
-    .show-info{
-        width: 100%;
-        max-width: 1280px;
     }
 
     .poast-img{
@@ -774,15 +786,37 @@ header{
         width: 360px;
     }
 
+    #second{
+        display: flex;
+    }
+
     /* section 2 */
+    .pc-prices{
+        display: block;
+    }
+
+    .two{
+        position: relative;
+        top: -25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 550px;
+        margin-left: 70px;
+        border: 1px solid #000;
+        border-radius: 10px ;
+        overflow: hidden;
+    }
+
     .info-details{
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .info-details h2{
         font-size: 32px;
-        margin-bottom: 40px;
-        margin-left: 12px;
+        margin-bottom: 15px;
     }
 
     #show-area{
@@ -790,8 +824,44 @@ header{
     }
 
     .maps{
-        margin: 20px 40px 40px 40px;
-        max-width: 1200px;
+        margin: 0 0 20px 0;
+        max-width: 500px;
         width: 100%;
     }
+
+    .show-info .show-schedule{
+        display: none;
+    }
+
+    .pc-prices{
+        display: block;
+        position: relative;
+    }
+
+    /* section 3 */
+    .three{
+        display: none;
+    }
+
+    footer{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .two{
+        width: 100%;
+        max-width:786px;
+    }
+
+    .pc-prices{
+        width: 415px;
+    }
+
+    .maps{
+        margin: 0 0 20px 0;
+        max-width: 745px;
+        width: 100%;
+    }
+
 }
