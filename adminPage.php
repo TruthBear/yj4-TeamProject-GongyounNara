@@ -83,42 +83,6 @@
             <div class="col6">가입일</div>
             <div class="col7">삭제</div>
           </div>
-          <div class="pc-members-info">
-            <div class="col1">4</div>
-            <div class="col2">kd04205</div>
-            <div class="col3">kd04205@naver.com</div>
-            <div class="col4">이름</div>
-            <div class="col5">일반 회원</div>
-            <div class="col6">2024-03-21 16:42:15</div>
-            <button class="delete">삭제</button>
-          </div>
-          <div class="pc-members-info">
-            <div class="col1">3</div>
-            <div class="col2">xmfkdnak98</div>
-            <div class="col3">xmfkdnak98@naver.com</div>
-            <div class="col4">최진영</div>
-            <div class="col5">어드민</div>
-            <div class="col6">2024-03-21 16:42:15</div>
-            <button class="delete">삭제</button>
-          </div>
-          <div class="pc-members-info">
-            <div class="col1">2</div>
-            <div class="col2">kd04205</div>
-            <div class="col3">kd04205@naver.com</div>
-            <div class="col4">이름</div>
-            <div class="col5">일반 회원</div>
-            <div class="col6">2024-03-21 16:42:15</div>
-            <button class="delete">삭제</button>
-          </div>
-          <div class="pc-members-info">
-            <div class="col1">1</div>
-            <div class="col2">kd04205</div>
-            <div class="col3">kd04205@naver.com</div>
-            <div class="col4">이름</div>
-            <div class="col5">일반 회원</div>
-            <div class="col6">2024-03-21 16:42:15</div>
-            <button class="delete">삭제</button>
-          </div>
         </div>
       </section>
     </div>
