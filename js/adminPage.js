@@ -1,24 +1,7 @@
 import { sqlController } from "../sql/sqlController.js";
 
 const mobileMember = document.getElementsByClassName('member')[0];
-const memberInfo = document.getElementsByClassName('detail-info');
 
-
-const paintModal = (data) => {
-  for(let i=0;i<memberInfo.length;i++){
-    memberInfo[i].innerText = data[0][i];
-  }
-}
-
-// 모달창전용 회원 상세조회
-const forModal = async (typeData, uid) => {
-  const data = await sqlController({
-    type: typeData,
-    sql: `select id, email, name, member_role, created_at from member where uid=${uid}`
-  })
-
-  paintModal(data)
-}
 
 // 모바일전용 회원 테이블 조회
 const forMobile = await sqlController({
@@ -47,6 +30,23 @@ const membersInfoList = document.querySelectorAll(".members-info");
 const modal=document.querySelector(".modal");
 const closeBtn=document.querySelector(".close-btn");
 const wrap=document.querySelector(".admin-page-wrap");
+const memberInfo = document.getElementsByClassName('detail-info');
+
+const paintModal = (data) => {
+  for(let i=0;i<memberInfo.length;i++){
+    memberInfo[i].innerText = data[0][i];
+  }
+}
+
+// 모달창전용 회원 상세조회
+const forModal = async (typeData, uid) => {
+  const data = await sqlController({
+    type: typeData,
+    sql: `select id, email, name, member_role, created_at from member where uid=${uid}`
+  })
+
+  paintModal(data)
+}
 
 membersInfoList.forEach((membersInfo) => {
   const uid = membersInfo.firstElementChild.innerText;
@@ -67,11 +67,24 @@ closeBtn.addEventListener("click",function(){
   }
 })
 
+// 모바일 UI용 삭제
+const deleteForMobile = async (typeData, id) => {
+  sqlController({
+    type: typeData,
+    sql: `delete from member where id='${id}'`
+  });
+}
+
+modal.lastElementChild.addEventListener('click', () => {
+  const showId = modal.children[1].children[1].innerText;
+  deleteForMobile('delete', showId);
+  location.reload(true);
+})
 
 
+// PC  전용 회원 테이블 조회
 const pcMember = document.getElementsByClassName('member')[1];
 
-console.log(pcMember);
 const forPC = await sqlController({
   type: "look",
   sql: 'select uid, id, email, name, member_role, created_at from member order by uid desc',
@@ -120,3 +133,21 @@ forPC.forEach(item => {
   pcMember.appendChild(pcMemberInfo);
 
 })
+
+
+// PC UI용 삭제
+const deleteForPc = async (typeData, uid) => {
+  sqlController({
+    type: typeData,
+    sql: `delete from member where uid=${uid}`
+  })
+}
+
+const test = document.getElementsByClassName('pc-members-info');
+for(const element of test) {
+  element.lastElementChild.addEventListener('click', () => {
+    deleteForPc('delete', element.firstElementChild.innerText);
+    location.reload(true);
+  })
+}
+
