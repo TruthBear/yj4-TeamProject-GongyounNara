@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/myPage.style.css"/>
     <link rel="stylesheet" href="./css/header.css"/>
-    <script type="module" src="../js/index.js" defer></script>
+    <!-- <script type="module" src="../js/index.js" defer></script> -->
     <script src="./js/toggleMenu.js" defer></script>
     <title>Document</title>
 </head>
@@ -13,6 +13,17 @@
   <header>
     <?php include './components/header.php' ?>
   </header>
+  <?php
+    if(!isset($_SESSION['user_id'])) {      
+      echo "
+        <script>
+          alert('로그인 해주세요.');
+          history.go(-1);  
+        </script>
+      ";       
+    }
+  ?>
+
   <div class="wrap">
     <div class="profile-box">
       <div class="profile">
@@ -20,8 +31,8 @@
           <img class=user-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAC9nkUrOYr_nZKahjeZAMtS03mfddn6iXxw&usqp=CAU"/>
           <img class="edit-icon" src="./assets/icons/edit.png"/>
         </div>
-        <div class="user-name">이름</div>
-        <div class="user-email">email222@gmail.com</div>
+        <div class="user-name"><?=$user_name?>(<?=$user_social_type?>)</div>
+        <div class="user-email"><?=$user_email?></div>
       </div>
     <section class="my-profile"> 
         <div class="tag">내 프로필</div>
@@ -29,7 +40,7 @@
           <div class="info-box">
             <div class="icon-box">
               <img src="./assets/icons/user.png"/>
-              <div class="info">닉네임</div>
+              <div class="info"><?=$user_name?></div>
             </div>
             <button class="change-info">닉네임 변경</button>
           </div>
@@ -43,7 +54,7 @@
           <div class="info-box">
             <div class="icon-box">
               <img src="./assets/icons/email.png">
-              <div class="info">이메일</div>
+              <div class="info"><?=$user_email?></div>
             </div>
             <button class="change-info">이메일 변경</button>
           </div>
