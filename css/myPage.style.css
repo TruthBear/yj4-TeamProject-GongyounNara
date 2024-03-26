@@ -10,6 +10,13 @@ a{
 li{
   list-style: none;
 }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden ;
+  height: 100vh;
+}
+
 body.menu-opened {
   overflow: hidden;
 }
@@ -25,10 +32,23 @@ body.menu-opened::before {
 label{
   cursor: pointer;
 }
+
+.wrapper {
+  position:relative; 
+  min-height:100%;
+}
+
+.wrapper footer {
+  position:absolute; 
+  width:100%; 
+  bottom:0;
+}
+
 /* 본문 */
 .wrap{
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 101.5px;
 }
 .profile-image{
   width: 80px;
