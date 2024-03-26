@@ -28,7 +28,7 @@
     <div class="profile-box">
       <div class="profile">
         <div class="profile-image">
-          <img class=user-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAC9nkUrOYr_nZKahjeZAMtS03mfddn6iXxw&usqp=CAU"/>
+          <img class=user-image src=<?=$user_profile?>>
           <img class="edit-icon" src="./assets/icons/edit.png"/>
         </div>
         <div class="user-name"><?=$user_name?>(<?=$user_social_type?>)</div>
