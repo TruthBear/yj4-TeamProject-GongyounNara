@@ -12,7 +12,7 @@
 <body>
   <div class="wrap">
     <header>
-      <div>공연나라</div>
+      <a href="index.php">공연나라</a>
     </header>
     <section class="sign-up">
       <h1>회원가입</h1>
