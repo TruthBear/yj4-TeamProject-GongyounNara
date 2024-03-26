@@ -114,6 +114,21 @@ if(isset($_POST)) {
       $message = "없슈";
       echo json_encode($message);
     }
+  } else if($type == "view") {
+     $user_id = $sql['user_id'];
+     $sql = "select performance_title, performance_poster_url from liked where member_id='$user_id'";
+    
+     $result = mysqli_query($db_connect, $sql);
+     $num = mysqli_num_rows($result);
+     $arr = array();
+
+     if($num > 0) {
+       while($row = mysqli_fetch_array($result)) {
+         $arr[] = $row;
+       }
+     } 
+     mysqli_close($db_connect);
+     echo json_encode($arr);
   }
 }
 ?>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/myPage.style.css"/>
     <link rel="stylesheet" href="./css/header.css"/>
     <script src="./js/toggleMenu.js" defer></script>
+    <script type="module" src="./js/mypage.js"></script>
     <title>Document</title>
 </head>
 <body>
