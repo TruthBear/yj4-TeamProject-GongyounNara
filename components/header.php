@@ -152,7 +152,7 @@ if(isset($_SESSION["user_role"])) {
                 ?>
                   <ul class="id">
                     <li>
-                      <a href="mypage.php" class="toggle-user-wrap">
+                      <a href="myPage.php" class="toggle-user-wrap">
                         <div class="toggle-user-img-wrap">
                           <img src=<?=$user_profile?> alt="User Profile Image">
                         </div>
