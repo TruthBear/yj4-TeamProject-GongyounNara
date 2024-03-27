@@ -112,7 +112,6 @@ submitBtn.addEventListener('click', () => {
   }else if(targetText === "비밀번호" && inputValue !== pwCheckValue){
     alert("비밀번호를 확인해주세요.");
   } else {
-    sqlApi('update', userId, inputValue, whatBox(targetText));
-    location.reload(true)
   }
 })
+
