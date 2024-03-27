@@ -13,8 +13,9 @@
 </head>
 
 <body>
-    <!-- 대가리 -->
-    <header>
+   <div class="wrapper">
+     <!-- 대가리 -->
+     <header>
       <?php include './components/header.php' ?>
     </header>
     
@@ -74,90 +75,7 @@
     <section>
         <div class="area-shows">
             <div class="area-show">
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="a-show">
-                    <!-- img -->
-                    <div class="a-img">
-                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnR8ZW58MHx8MHx8fDA%3D" alt="">
-                    </div>
-                    <!-- description -->
-                    <div class="a-description">   
-                        <ul>
-                            <li><strong>공연제목</strong></li>
-                            <li>24.02.29 ~ 24.03.29</li>
-                            <li>뮤지컬</li>
-                        </ul>
-                    </div>
-                </div>
+             <img src="./assets/icons/Spinner.svg" alt="loading" class="loading">
             </div>
         </div>
     </section>
@@ -167,6 +85,7 @@
         <footer>
           <?php include './components/footer.php' ?>
         </footer>
+   </div>
 </body>
 
 

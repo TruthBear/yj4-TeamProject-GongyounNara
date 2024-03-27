@@ -43,10 +43,6 @@ label {
     min-height:100%;
 }
 
-.wrapper .list {
-    padding-bottom:100px;
-}
-
 .wrapper footer {
     position:absolute; 
     width:100%; 
@@ -382,7 +378,7 @@ input[type=checkbox]:checked + label
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .area-show{
@@ -683,4 +679,9 @@ footer{
     .area-show{
         grid-template-columns: repeat(5,1fr);
     }
+}
+
+.loading {
+  position: fixed;
+  
 }
