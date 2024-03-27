@@ -32,7 +32,7 @@
             <img class=user-image src=<?=$user_profile?>>
             <img class="edit-icon" src="./assets/icons/edit.png"/>
           </div>
-          <div class="user-name"><?=$user_name?>(<?=$user_social_type?>)</div>
+          <div class="user-name"><?=$user_name?>(<span id="user-social-type"><?=$user_social_type?></span>)</div>
           <div class="user-email"><?=$user_email?></div>
         </div>
       <section class="my-profile"> 

@@ -11,7 +11,6 @@ const paintLikedList = (data) => {
   thumbnailBox.innerHTML = "";
   if(data.length > 0){
     data.forEach(item => {
-      console.log(item);
       const card = document.createElement('a');
       card.classList.add('card');
       card.setAttribute('href', `../detail.php?code=${item.performance_code}`);
@@ -103,15 +102,20 @@ closeBtn.addEventListener('click', () => {
   }
 })
 
-submitBtn.addEventListener('click', () => {
+
+
+submitBtn.addEventListener('click', (e) => {
   const targetText = document.querySelector('.modal h2').innerText.slice(0, -3);
   const inputValue = document.getElementById(`${whatBox(targetText)}-change`).value;
   const pwCheckValue = document.getElementById('password-change-check').value;
+  const socialType = document.getElementsByClassName("user-name")[0].children[0].innerText;
+
   if(inputValue === "") {
     alert(`새로운 ${targetText}를 입력해주세요.`);
   }else if(targetText === "비밀번호" && inputValue !== pwCheckValue){
     alert("비밀번호를 확인해주세요.");
-  } else {
+  } else if(socialType !== "일반" && (targetText === "비밀번호" || targetText === "이메일") ) {
+    alert(`소셜회원은 ${targetText}를 변경하실 수 없습니다.`);
+    e.preventDefault();
   }
 })
-
