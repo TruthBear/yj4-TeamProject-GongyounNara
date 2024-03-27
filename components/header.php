@@ -101,7 +101,7 @@ if(isset($_SESSION["user_role"])) {
               </div>
               <ul class="user-list">
                   <li class="user user-hidden" >
-                    <a href="mypage.php">
+                    <a href="myPage.php">
                       <div><?=$user_name?></div>
                       <div>프로필 보기</div>
                     </a>
