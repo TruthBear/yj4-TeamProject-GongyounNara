@@ -78,13 +78,14 @@ const showDetailApi = async (code) => {
   // 관심 목록
   const userNeeds = document.getElementsByClassName('user-needs');
   
-  const likedApi = async (typeData, id, title, posterUrl) => {
+  const likedApi = async (typeData, id, title, posterUrl, code) => {
     const data = await sqlController({
       type: typeData,
       sql: {
         user_id: id,
         performance_title: title,
         performance_poster_url: posterUrl,
+        performance_code: code
       }
     });
 
@@ -113,7 +114,7 @@ const showDetailApi = async (code) => {
       if(id !== ""){
         const likeIcon = element.firstElementChild.firstElementChild.firstElementChild;
         likeIcon.classList.toggle('liked');
-        likedApi("pushLike",id, title, poster);
+        likedApi("pushLike",id, title, poster, code);
       } else {
         alert("로그인 해주세요!");
       }

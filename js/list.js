@@ -3,9 +3,6 @@ import { selectedDay, select } from "./calendar.js";
 
 const options = Array.from(document.getElementsByClassName('option'));
 
-console.log(selectedDay);
-
-
 // 리스트페이지API 출력 함수
 const paintData = (data, elementTag) => {
   const areaShow = document.getElementsByClassName(elementTag)[0]; 
@@ -13,7 +10,9 @@ const paintData = (data, elementTag) => {
 
   if(Array.isArray(data.db) === true){
     data.db.forEach(item => {
-      const aShow = document.createElement('div');
+      
+      const aShow = document.createElement('a');
+      aShow.setAttribute('href', `../detail.php?code=${item.mt20id}`)
       aShow.classList.add('a-show');
   
       const aImg = document.createElement('div');
@@ -53,6 +52,7 @@ const paintData = (data, elementTag) => {
     // 데이터가 하나밖에 없을때
 
     const aShow = document.createElement('div');
+    aShow.setAttribute('href', `../detail.php?code=${data.db.mt20id}`)
     aShow.classList.add('a-show');
 
     const aImg = document.createElement('div');

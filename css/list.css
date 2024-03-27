@@ -397,6 +397,7 @@ input[type=checkbox]:checked + label
 .a-show{
     width: 100%;
     height: 320px;
+    color: #000;
 }
 
 .a-show .a-img{

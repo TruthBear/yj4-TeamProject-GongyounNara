@@ -4,10 +4,13 @@ import { today } from "../config/date.js";
 const paintData = (data) => {
   const searchsShow = document.getElementsByClassName('searchs-show')[0];
   searchsShow.innerHTML = " ";
+  const searchResult = document.getElementsByClassName('search-result')[0];
+  searchResult.classList.remove('hidden');
 
   if(Array.isArray(data.db) === true) {
     data.db.forEach(item => {
-      const searchShow = document.createElement('div');
+      const searchShow = document.createElement('a');
+      searchShow.setAttribute('href', `../detail.php?code=${item.mt20id}`)
       searchShow.classList.add('search-show');
       
       const searchImg = document.createElement('div');
@@ -64,7 +67,7 @@ const options = Array.from(document.getElementsByClassName('option'));
 const showData = async (searchWord, location) => {
   const data = await apiController({
     url: "http://www.kopis.or.kr/openApi/restful/pblprfr?",
-    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=5&prfstate=02&signgucode=${location}&shprfnm=${searchWord}&newsql=Y`
+    query: `&stdate=${today}&eddate=${today}&cpage=1&rows=20&prfstate=02&signgucode=${location}&shprfnm=${searchWord}&newsql=Y`
   });
   paintData(data);
 }
