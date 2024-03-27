@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>공연나라</title>
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./api/apiController.js" defer></script>
     <script type="module" src="../js/index.js" defer></script>
+
 </head>
 
 <body>

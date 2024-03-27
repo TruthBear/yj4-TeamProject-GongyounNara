@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/adminPage.css"/>
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/adminPage.js"></script>
-    <title>Document</title>
+    <title>관리자 페이지</title>
 </head>
 <body>
   <div class="admin-page-wrap">

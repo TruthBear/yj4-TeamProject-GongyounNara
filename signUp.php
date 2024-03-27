@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/signUp.style.css"/>
     <script type="module" src="./js/signUp.js"></script>
     <script type="module" src="./js/signUpRemove.js"></script>
-    <title>Document</title>
+    <title>회원가입</title>
 </head>
 <body>
   <div class="wrap">

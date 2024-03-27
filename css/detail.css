@@ -33,7 +33,7 @@ label{
   }
 
 /* header */
-header{
+/* header{
     background-color: #000;
     padding-top: 15px;
     padding-bottom: 16px;
@@ -64,10 +64,10 @@ header{
 
 .menu-container li{
     margin-right: 10px;
-}
+} */
 
 /* 메뉴 호버 색깔 */
-.menu-container li a:hover{
+/* .menu-container li a:hover{
     color: #FEC100;
     text-decoration: underline;
     text-underline-offset: 5px ;
@@ -114,10 +114,10 @@ header{
 .user-img img{
     width: 36px;
     height: 36px;
-}
+} */
 
 /* user 선택박스 */
-.user-btn{
+/* .user-btn{
     cursor: pointer;
 }
 
@@ -166,11 +166,11 @@ header{
 .search-img{
     padding-left: 15px;
     display: none;
-}
+} */
 
 /* 지역 선택 박스 */
 
-#area-box {
+/* #area-box {
   position: relative;
   padding-right: 5px;
 }
@@ -215,10 +215,10 @@ header{
 
 .option-hidden {
   display: none;
-}
+} */
 
 /* 토글 */
-.toggle{
+/* .toggle{
     position: relative;
     color: #000;
 }
@@ -316,7 +316,7 @@ header{
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-}
+} */
 
 /* section 1 */
     .back{
@@ -689,7 +689,7 @@ header{
 @media screen and (min-width:768px) {
 
     /* toggle */
-    .tog-menu{
+    /* .tog-menu{
         width: 33vw;
     }
 
@@ -736,12 +736,12 @@ header{
 
     .kakao-map{
         height: 500px;
-    }
+    } */
 }
 
 @media screen and (min-width:1024px) {
       /* header */
-      .head{
+      /* .head{
         width: 100%;
     }
 
@@ -771,7 +771,7 @@ header{
 
     .toggle{
         display: none;
-    }
+    } */
 
     /* section 1 */
   

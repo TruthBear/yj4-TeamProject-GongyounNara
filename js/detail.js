@@ -105,6 +105,8 @@ const showDetailApi = async (code) => {
   const title = data.db.prfnm;
   const poster = data.db.poster;
   
+  document.title = data.db.prfnm;
+  
   if(id !== ""){
     likedApi("liked",id, title, "");
   }

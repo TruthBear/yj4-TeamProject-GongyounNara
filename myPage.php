@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/header.css"/>
     <script src="./js/toggleMenu.js" defer></script>
     <script type="module" src="./js/mypage.js"></script>
-    <title>Document</title>
+    <title>마이페이지</title>
 </head>
 <body>
   <div class="wrapper">
