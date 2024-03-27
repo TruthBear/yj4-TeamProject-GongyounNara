@@ -95,6 +95,7 @@ if(isset($_POST)) {
     $user_id = $sql['user_id'];
     $performance_title = $sql['performance_title'];
     $performance_poster_url = $sql['performance_poster_url'];
+    $performance_code = $sql['performance_code'];
     
     $sql = "select * from liked where member_id='$user_id' and performance_title='$performance_title'";
     $result = mysqli_query($db_connect, $sql);
@@ -107,8 +108,8 @@ if(isset($_POST)) {
       $message = "있슈";
       echo json_encode($message);
     } else {
-      $sql = "insert into liked(member_id, performance_title, performance_poster_url)";
-      $sql .= "values('$user_id', '$performance_title', '$performance_poster_url')";
+      $sql = "insert into liked(member_id, performance_title, performance_poster_url, performance_code)";
+      $sql .= "values('$user_id', '$performance_title', '$performance_poster_url', '$performance_code')";
       mysqli_query($db_connect, $sql);
       
       $message = "없슈";
@@ -116,7 +117,7 @@ if(isset($_POST)) {
     }
   } else if($type == "view") {
      $user_id = $sql['user_id'];
-     $sql = "select performance_title, performance_poster_url from liked where member_id='$user_id'";
+     $sql = "select performance_title, performance_poster_url, performance_code from liked where member_id='$user_id'";
     
      $result = mysqli_query($db_connect, $sql);
      $num = mysqli_num_rows($result);
@@ -137,7 +138,6 @@ if(isset($_POST)) {
     $sql = "update member set $update_type='$update_value' where id='$user_id'";
     mysqli_query($db_connect, $sql);
     mysqli_close($db_connect);
-    echo json_encode("변경 완료");
   }
 }
 ?>

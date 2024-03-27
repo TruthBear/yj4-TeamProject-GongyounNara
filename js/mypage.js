@@ -11,10 +11,11 @@ const paintLikedList = (data) => {
   thumbnailBox.innerHTML = "";
   if(data.length > 0){
     data.forEach(item => {
+      console.log(item);
       const card = document.createElement('a');
       card.classList.add('card');
-      card.setAttribute('href', "../index.php");
-  
+      card.setAttribute('href', `../detail.php?code=${item.performance_code}`);
+
       const thumbnail = document.createElement('div');
       thumbnail.classList.add('thumbnail');
   
@@ -48,8 +49,6 @@ const sqlApi = async ( typeData, userId, updateValue, updateType ) => {
   })
   if(updateValue !== "" && updateType !== "") {
     paintLikedList(data);
-  } else {
-    location.reload(true);
   }
 }
 
@@ -114,5 +113,6 @@ submitBtn.addEventListener('click', () => {
     alert("비밀번호를 확인해주세요.");
   } else {
     sqlApi('update', userId, inputValue, whatBox(targetText));
+    location.reload(true)
   }
 })
