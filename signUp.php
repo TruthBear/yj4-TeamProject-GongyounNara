@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./css/signUp.style.css"/>
     <script type="module" src="./js/signUp.js"></script>
     <script type="module" src="./js/signUpRemove.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <title>회원가입</title>
 </head>
 <body>

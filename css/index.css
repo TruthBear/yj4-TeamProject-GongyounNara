@@ -9,6 +9,8 @@ html,body{
     width: 100%;
     overflow-x: hidden ;
     height: 100vh;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
 }
 
 a{

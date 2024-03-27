@@ -6,6 +6,8 @@
 
 body {
   height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .form-title {
